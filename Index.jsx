@@ -99,13 +99,13 @@ image=' https://c8r.imgix.net/076e21c7efe2740c3912acb1/27.jpg'/>
     <PinterestIconLink />
   }
   {props.soundcloud &&
-    <SoundcloudIcon />
+    <SoundcloudIconLink />
   }
   {props.vimeo &&
     <VimeoIconLink />
   }
   {props.codepen && 
-    <CodepenIcon />
+    <CodepenIconLink />
   }
   {props.youtube && 
     <YoutubeIconLink />
@@ -113,5 +113,50 @@ image=' https://c8r.imgix.net/076e21c7efe2740c3912acb1/27.jpg'/>
 </Flex>
 
 <Text fontSize={0} center mx='auto'>© 2017 You, Inc.</Text>
+</Container>
+</footer>
+<footer style={{borderTop: '1px solid #bbb' }}>
+<Container pt={5} pb={4}>
+<Flex align='center'>
+<Box w={1/2}>
+<Text fontSize={1}>
+  I'm currently available for contracts in Q2 of 2018. If you're interested in collaborating on a project <b style={{fontWeight: 600 }}>drop me a line</b>.
+</Text>
+<Text fontSize={0}>© 2017 You, Inc.</Text>
+</Box>
+<Flex px={2} pt={4} pb={4} justify='center' ml='auto'>
+  {props.twitter &&
+    <TwitterIconLink href={'https://twitter.com/'+props.twitter} />
+  }
+  {props.github &&
+    <GitHubIconLink href={'https://github.com/'+props.github} />
+  }
+  {props.facebook &&
+    <FacebookIconLink />
+  }
+  {props.instagram &&
+    <InstagramIconLink href={'https://instagram.com/'+props.instagram} />
+  }
+   {props.dribbble &&
+    <DribbbleIconLink href={'https://dribbble.com/'+props.dribbble} />
+  }
+  {props.pinterest &&
+    <PinterestIconLink />
+  }
+  {props.soundcloud &&
+    <SoundcloudIconLink />
+  }
+  {props.vimeo &&
+    <VimeoIconLink />
+  }
+  {props.codepen && 
+    <CodepenIconLink />
+  }
+  {props.youtube && 
+    <YoutubeIconLink />
+  }
+</Flex>
+</Flex>
+
 </Container>
 </footer>
