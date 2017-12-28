@@ -41,12 +41,17 @@
       "type": "a",
       "props": {
         "fontWeight": "700",
-        "fontSize": 0
+        "fontSize": 0,
+        "color": "inherit",
+        "ml": 4
       },
       "style": {
         "textTransform": "uppercase",
         "letterSpacing": "0.15em",
-        "lineHeight": "1"
+        "lineHeight": "1",
+        "textDecoration": "none",
+        "display": "inline-block",
+        "whiteSpace": "nowrap"
       },
       "examples": [
         "<NavLink>Navigation Link</NavLink>"
@@ -65,7 +70,8 @@
         "hover": {
           "opacity": 0.6,
           "transition": "opacity .25s ease-in-out"
-        }
+        },
+        "color": "inherit"
       },
       "style": {
         "textDecoration": "none",
@@ -110,35 +116,46 @@
       "name": "Avatar",
       "type": "img",
       "props": {
-        "w": 48
+        "borderRadius": 9999,
+        "borderWidth": 1,
+        "borderColor": "black25",
+        "pt": 1,
+        "pl": 1,
+        "pb": 1,
+        "pr": 1
       },
       "style": {
-        "maxWidth": "64em"
+        "height": "${props.size? props.size: '48px'}",
+        "width": "${props.size? props.size: '48px'}",
+        "display": "block"
       },
       "examples": [
         "<Avatar />"
       ],
-      "system": [],
+      "system": [
+        "borderRadius",
+        "borderWidth",
+        "borderColor"
+      ],
       "description": "Basic Avatar"
     },
     {
       "name": "PageTitle",
-      "type": "h1",
+      "type": "h2",
       "props": {
         "fontSize": [
-          3,
           4,
-          8
+          4,
+          6
         ],
         "fontWeight": "600",
         "mt": 0,
-        "mb": 2,
-        "color": "black"
+        "mb": 1,
+        "color": "inherit"
       },
       "style": {
-        "lineHeight": "1.25",
-        "textAlign": "${props.center? 'center': 'left'}",
-        "textTransform": "uppercase"
+        "maxWidth": "64em",
+        "textAlign": "${props.center? 'center': 'inherit'}"
       },
       "examples": [
         "<PageTitle>Page Title Example</PageTitle>"
@@ -152,22 +169,23 @@
     },
     {
       "name": "PageSubtitle",
-      "type": "h2",
+      "type": "h3",
       "props": {
-        "fontWeight": "500",
+        "fontWeight": "600",
         "fontSize": [
-          2,
+          1,
+          1,
           3
         ],
         "my": 0,
         "borderColor": "transparent",
-        "color": "gray"
+        "color": "inherit"
       },
       "style": {
         "lineHeight": "1.25",
-        "textAlign": "${props.center? 'center': 'left'}",
+        "textAlign": "${props.center? 'center': 'inherit'}",
         "textTransform": "uppercase",
-        "letterSpacing": "0.075em"
+        "letterSpacing": ".075em"
       },
       "examples": [
         "<PageSubtitle>Hello</PageSubtitle>"
@@ -228,7 +246,7 @@
         "mt": 2,
         "mb": 1,
         "borderColor": "transparent",
-        "color": "black"
+        "color": "inherit"
       },
       "style": {
         "lineHeight": "1.25"
@@ -250,12 +268,13 @@
         "mb": 2,
         "fontWeight": "500",
         "borderColor": "transparent",
-        "color": "gray"
+        "color": "inherit"
       },
       "style": {
         "lineHeight": "1.5",
         "textTransform": "uppercase",
-        "letterSpacing": "0.07em"
+        "letterSpacing": "0.07em",
+        "opacity": 0.75
       },
       "examples": [
         "<CardSubtitle>Card Subtitle</CardSubtitle>"
@@ -270,7 +289,8 @@
       "type": "p",
       "props": {
         "fontWeight": "400",
-        "mt": 0
+        "mt": 0,
+        "color": "inherit"
       },
       "style": {
         "maxWidth": "28em",
@@ -329,7 +349,8 @@
         "mx": "auto"
       },
       "style": {
-        "maxWidth": "64em"
+        "maxWidth": "64em",
+        "textAlign": "${props.center? 'center': 'left'}"
       },
       "examples": [
         "<Container>Site container for centering content.</Container>"
@@ -472,15 +493,16 @@
       "type": "a",
       "props": {
         "hover": {
-          "color": "#000",
-          "transition": "color .25s ease-in-out"
+          "opacity": ".64",
+          "transition": "opacity .25s ease-in-out"
         },
         "fontWeight": "600",
-        "color": "gray"
+        "color": "inherit"
       },
       "style": {
         "textDecoration": "none",
-        "transition": "color .25s ease-in-out"
+        "transition": "opacity .25s ease-in-out",
+        "opacity": 1
       },
       "examples": [
         "<IconLink>Icon Link</IconLink>"
@@ -530,7 +552,7 @@
       "props": {
         "my": 0,
         "fontWeight": "600",
-        "color": "black"
+        "color": "inherit"
       },
       "style": {
         "lineHeight": "1.25"
@@ -547,7 +569,8 @@
       "type": "h3",
       "props": {
         "my": 0,
-        "fontWeight": "500"
+        "fontWeight": "500",
+        "color": "inherit"
       },
       "style": {},
       "examples": [
@@ -560,11 +583,14 @@
     {
       "name": "PanelText",
       "type": "p",
-      "props": {},
+      "props": {
+        "color": "inherit"
+      },
       "style": {},
       "examples": [
         "<PanelText>Hello</PanelText>"
-      ]
+      ],
+      "system": []
     },
     {
       "name": "PanelImage",
@@ -635,13 +661,16 @@
         "fontSize": 3
       },
       "style": {
-        "maxWidth": "${props.wide? '34em': '28em'}",
-        "textAlign": "${props.center? \"center\": \"left\"}"
+        "textAlign": "${props.center? 'center': 'inherit'}",
+        "maxWidth": "${props.wide? '30em': '28em'}"
       },
       "examples": [
         "<Text>Hello</Text>"
       ],
-      "system": []
+      "system": [
+        "fontWeight",
+        "focus"
+      ]
     },
     {
       "name": "SectionTitle",
@@ -650,7 +679,8 @@
         "fontWeight": "500",
         "borderWidth": 1,
         "borderBottom": true,
-        "borderColor": "gray"
+        "borderColor": "gray",
+        "color": "inherit"
       },
       "style": {},
       "examples": [
@@ -705,6 +735,213 @@
         "<Capitalize>Hello</Capitalize>"
       ],
       "system": []
+    },
+    {
+      "name": "PageBG",
+      "type": "div",
+      "props": {
+        "w": "100vw",
+        "image": "https://mrmrs.github.io/photos/u/022.jpg"
+      },
+      "style": {
+        "height": "${props.half? '50vh': '100vh'}",
+        "backgroundRepeat": "no-repeat",
+        "backgroundPosition": "center center",
+        "backgroundImage": "url(${props.image})",
+        "backgroundSize": "cover"
+      },
+      "examples": [
+        "<PageBG half>Hello</PageBG>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Center",
+      "type": "div",
+      "props": {},
+      "style": {
+        "textAlign": "center"
+      },
+      "examples": [
+        "<Center>Hello</Center>"
+      ],
+      "system": []
+    },
+    {
+      "name": "SiteHeader",
+      "imports": [
+        "NavLink",
+        "Avatar",
+        "Flexbox",
+        "Div"
+      ],
+      "jsx": "<header>\n<Flexbox>\n  <Avatar src={props.src} />\n  <Div ml='auto'>\n  {(props.links || []).map(link => (\n    <NavLink href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
+      "examples": [
+        "<SiteHeader \nsrc='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'\nlinks={[\n  {\n    href: '#0', \n    text: 'link 1' \n  },\n  {\n    href: '#0', \n    text: 'link 2' \n  },\n  {\n    href: '#0', \n    text: 'link 3' \n  }\n    ]} />"
+      ],
+      "system": []
+    },
+    {
+      "name": "HorizontalRule",
+      "type": "hr",
+      "props": {
+        "borderWidth": 1,
+        "borderTop": true,
+        "borderColor": "currentColor"
+      },
+      "style": {},
+      "examples": [
+        "<HorizontalRule />"
+      ],
+      "system": [
+        "borderWidth",
+        "borderColor"
+      ]
+    },
+    {
+      "name": "TileLink",
+      "type": "a",
+      "props": {
+        "w": 1,
+        "hover": {
+          "cursor": "pointer",
+          "opacity": 0.5,
+          "transition": "opacity .25s ease-in-out"
+        }
+      },
+      "style": {
+        "opacity": 1,
+        "transition": "opacity .25s ease-in-out",
+        "display": "block",
+        "height": 0,
+        "position": "relative",
+        "paddingBottom": "66.66%"
+      },
+      "examples": [
+        "<TileLink>Hello</TileLink>"
+      ],
+      "system": [
+        "hover"
+      ]
+    },
+    {
+      "name": "TileTitle",
+      "type": "h3",
+      "props": {
+        "fontSize": [
+          4
+        ],
+        "mt": 0,
+        "mb": 2
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": ".075em",
+        "lineHeight": "1"
+      },
+      "examples": [
+        "<TileTitle>Hello</TileTitle>"
+      ],
+      "system": []
+    },
+    {
+      "name": "TileSubtitle",
+      "type": "h4",
+      "props": {
+        "mt": 0,
+        "mb": 2,
+        "fontSize": [
+          1,
+          2
+        ],
+        "fontWeight": "700"
+      },
+      "style": {},
+      "examples": [
+        "<TileSubtitle>Hello</TileSubtitle>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "TileKicker",
+      "type": "h5",
+      "props": {
+        "fontSize": 0,
+        "mt": 0,
+        "mb": 2,
+        "fontWeight": "400",
+        "opacity": 0.75
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": "0.075em"
+      },
+      "examples": [
+        "<TileKicker>Hello</TileKicker>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "TileText",
+      "type": "Text",
+      "props": {
+        "fontSize": [
+          1,
+          2
+        ],
+        "mt": 0
+      },
+      "style": {},
+      "examples": [
+        "<TileText />"
+      ],
+      "system": []
+    },
+    {
+      "name": "TileImage",
+      "type": "div",
+      "props": {
+        "w": 1,
+        "src": "https://mrmrs.github.io/photos/u/017.jpg"
+      },
+      "style": {
+        "position": "absolute",
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "zIndex": 100,
+        "height": "100%",
+        "backgroundImage": "url(${props.src})",
+        "backgroundPosition": "center center",
+        "backgroundSize": "cover"
+      },
+      "examples": [
+        "<TileImage>Hello</TileImage>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Tile",
+      "imports": [
+        "TileTitle",
+        "TileSubtitle",
+        "TileLink",
+        "TileText",
+        "TileImage",
+        "Div",
+        "TileKicker",
+        "Flexbox"
+      ],
+      "jsx": "<TileLink {...props}>\n  <TileImage src={props.src}>\n  <Flexbox p={3} wrap style={{ alignContent: 'flex-end', height: '100%' }}>\n\n  <TileKicker w={1} children={props.kicker} />\n    <TileTitle w={1} children={props.title} />\n    <TileSubtitle w={1} children={props.subtitle} />\n    \n    <TileText w={1} children={props.text} />\n    \n    </Flexbox>\n  </TileImage>\n</TileLink>",
+      "examples": [
+        "<Tile \ncolor='white'\nsrc='https://mrmrs.github.io/photos/u/017.jpg' \ntitle='This is text for a title.'\nkicker=\"27 May 2015\"\nsubtitle='By: Akil Johnson'\ntext='This is a bunch of potential text for the tile. Could be very long or very short.'\n/>"
+      ],
+      "system": []
     }
   ],
   "layout": [
@@ -714,7 +951,7 @@
       "w": 3,
       "h": 6,
       "x": 0,
-      "y": 34,
+      "y": 46,
       "moved": false,
       "static": false
     },
@@ -752,9 +989,9 @@
       "name": "Avatar",
       "i": "4",
       "w": 1,
-      "h": 4,
+      "h": 3,
       "x": 3,
-      "y": 8,
+      "y": 20,
       "moved": false,
       "static": false
     },
@@ -784,7 +1021,7 @@
       "w": 3,
       "h": 9,
       "x": 0,
-      "y": 15,
+      "y": 27,
       "moved": false,
       "static": false
     },
@@ -794,7 +1031,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 30,
+      "y": 42,
       "moved": false,
       "static": false
     },
@@ -804,7 +1041,7 @@
       "w": 3,
       "h": 2,
       "x": 0,
-      "y": 24,
+      "y": 36,
       "moved": false,
       "static": false
     },
@@ -814,7 +1051,7 @@
       "w": 1,
       "h": 2,
       "x": 0,
-      "y": 26,
+      "y": 38,
       "moved": false,
       "static": false
     },
@@ -824,7 +1061,7 @@
       "w": 3,
       "h": 2,
       "x": 0,
-      "y": 28,
+      "y": 40,
       "moved": false,
       "static": false
     },
@@ -834,7 +1071,7 @@
       "w": 2,
       "h": 2,
       "x": 1,
-      "y": 26,
+      "y": 38,
       "moved": false,
       "static": false
     },
@@ -884,7 +1121,7 @@
       "w": 3,
       "h": 4,
       "x": 6,
-      "y": 16,
+      "y": 34,
       "moved": false,
       "static": false
     },
@@ -894,7 +1131,7 @@
       "w": 3,
       "h": 4,
       "x": 6,
-      "y": 12,
+      "y": 30,
       "moved": false,
       "static": false
     },
@@ -904,7 +1141,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 11,
+      "y": 22,
       "moved": false,
       "static": false
     },
@@ -914,7 +1151,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 44,
+      "y": 56,
       "moved": false,
       "static": false
     },
@@ -924,7 +1161,7 @@
       "w": 3,
       "h": 4,
       "x": 3,
-      "y": 24,
+      "y": 27,
       "moved": false,
       "static": false
     },
@@ -944,7 +1181,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 15,
+      "y": 34,
       "moved": false,
       "static": false
     },
@@ -954,7 +1191,7 @@
       "w": 3,
       "h": 4,
       "x": 4,
-      "y": 20,
+      "y": 38,
       "moved": false,
       "static": false
     },
@@ -964,7 +1201,7 @@
       "w": 3,
       "h": 4,
       "x": 3,
-      "y": 12,
+      "y": 23,
       "moved": false,
       "static": false
     },
@@ -974,7 +1211,7 @@
       "w": 3,
       "h": 4,
       "x": 6,
-      "y": 8,
+      "y": 26,
       "moved": false,
       "static": false
     },
@@ -994,7 +1231,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 40,
+      "y": 52,
       "moved": false,
       "static": false
     },
@@ -1004,7 +1241,7 @@
       "w": 1,
       "h": 2,
       "x": 5,
-      "y": 6,
+      "y": 20,
       "moved": false,
       "static": false
     },
@@ -1024,7 +1261,7 @@
       "w": 1,
       "h": 2,
       "x": 4,
-      "y": 6,
+      "y": 20,
       "moved": false,
       "static": false
     },
@@ -1034,7 +1271,7 @@
       "w": 1,
       "h": 2,
       "x": 5,
-      "y": 4,
+      "y": 18,
       "moved": false,
       "static": false
     },
@@ -1044,7 +1281,7 @@
       "w": 1,
       "h": 2,
       "x": 4,
-      "y": 4,
+      "y": 18,
       "moved": false,
       "static": false
     },
@@ -1064,7 +1301,7 @@
       "w": 1,
       "h": 2,
       "x": 3,
-      "y": 4,
+      "y": 12,
       "moved": false,
       "static": false
     },
@@ -1084,7 +1321,7 @@
       "w": 1,
       "h": 2,
       "x": 3,
-      "y": 6,
+      "y": 18,
       "moved": false,
       "static": false
     },
@@ -1104,7 +1341,117 @@
       "w": 3,
       "h": 15,
       "x": 0,
+      "y": 12,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PageBG",
+      "i": "40",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 4,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Center",
+      "i": "41",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 14,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "SiteHeader",
+      "i": "42",
+      "w": 6,
+      "h": 4,
+      "x": 6,
+      "y": 11,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "HorizontalRule",
+      "i": "43",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 30,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TileLink",
+      "i": "44",
+      "w": 3,
+      "h": 4,
+      "x": 0,
       "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TileTitle",
+      "i": "45",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 4,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TileSubtitle",
+      "i": "46",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 22,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TileKicker",
+      "i": "47",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 26,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TileText",
+      "i": "48",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 8,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TileImage",
+      "i": "49",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 8,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Tile",
+      "i": "50",
+      "w": 6,
+      "h": 7,
+      "x": 6,
+      "y": 15,
       "moved": false,
       "static": false
     }
