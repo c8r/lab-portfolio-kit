@@ -1,5 +1,5 @@
 ---
-image: 'https://mrmrs.github.io/photos/u/027.jpg'
+image: 'https://c8r.imgix.net/2038e525b3d66825c826aafc/32.jpg'
 avatar: 'https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
 title: The Page Title
 subtitle: The page subtitle
@@ -28,56 +28,92 @@ cards:
     title: Card Title 2
     subtitle: Card Subtitle
     text: Short card description.
+    link: null
   - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg'
     title: This is a card title
     subtitle: Card Subtitle
     text: You can edit all of this without touching markup
+    link: null
   - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg'
     title: Card title 3
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
+    link: null
   - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg'
     title: Card title 3
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
+    link: null
   - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg'
     title: Card Title 2
     subtitle: >-
       Card Subtitle that wraps on to multiple lines so we can see what will
       happen with stacking
     text: 'This is descripiton text about the card, it can be several lines long.'
+    link: null
   - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg'
     title: Card Title 1
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
+    link: null
 ---
-<PageBG half src={props.image} />
+<Box>
+<Container px={3} py={3}>
+<SiteHeader 
+src={props.avatar}
+links={props.links} 
+/>
+</Container>
+<HorizontalRule color='#eee' />
+</Box>
+<PageBG half image={props.image} />
+
 <Container px={3} pt={5}>
-  <PageTitle children={props.title} />
+  <PageTitle  children={props.title} />
   <PageSubtitle children={props.subtitle} />
-   <Text wide>
-    <b>{props.about}</b>
-  </Text>
-  <Text wide>
+   <Text widen fontSize={4}>
     {props.about}
   </Text>
- 
- <Flex>
- <Box w={1/2}>
-  <Image src='https://mrmrs.github.io/photos/u/041.jpg' />
+  <Text wide mb={5}>
+    {props.about}
+  </Text>
+ <SectionTitle children='Product Shots' />
+ <Flex wrap mx={-2}>
+ <Box w={1/3} px={2}>
+  <Image mb={3} src='https://c8r.imgix.net/0588cbf345f8020349d0da52/37.jpg' />
+  <Meta>
+    Description for the product image. 
+  </Meta>
  </Box>
-  <Box w={1/2}>
-  <Image src='https://mrmrs.github.io/photos/u/001.jpg' />
+  <Box w={1/3} px={2}>
+  <Image src='https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg' />
+   <Meta>
+    Description for the product image. 
+  </Meta>
+ </Box>
+   <Box w={1/3} px={2}>
+  <Image src='https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg' />
+   <Meta>
+    Description for the product image. 
+  </Meta>
+ </Box>
+ <Box w={1} mt={3} px={2}>
+ <Image src='https://c8r.imgix.net/88519cde3698506f6f10ce34/31.jpg' />
+   <Meta>
+    Description for the product image. 
+  </Meta>
  </Box>
  </Flex>
-  <SectionTitle mt={7} children='Other Projects' />
+  <Text wide mb={5}>
+    {props.about}
+  </Text>
+  <SectionTitle mt={6} mb={3} children='Other Projects' />
   
-  <Flex mx={-2}>
+  <Flex nowrap mx={-2}>
 {(props.cards || []).map(card => (
-  <Box px={2} mb={4}>
-    <Card 
-     src={card.src}
- 
+  <Box px={2} mb={3} w={[1]}>
+    <Tile src={card.src}
+          href={card.link}
    
    />
   </Box>

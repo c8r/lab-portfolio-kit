@@ -43,7 +43,15 @@
         "fontWeight": "700",
         "fontSize": 0,
         "color": "inherit",
-        "ml": 4
+        "ml": 4,
+        "hover": {
+          "opacity": 0.7,
+          "transition": "opacity .25s ease-in-out"
+        },
+        "active": {
+          "opacity": 0.9,
+          "transition": "opacity .25 ease-in-out"
+        }
       },
       "style": {
         "textTransform": "uppercase",
@@ -51,13 +59,17 @@
         "lineHeight": "1",
         "textDecoration": "none",
         "display": "inline-block",
-        "whiteSpace": "nowrap"
+        "whiteSpace": "nowrap",
+        "transition": "opacity .33s ease-in-out",
+        "opacity": 1
       },
       "examples": [
         "<NavLink>Navigation Link</NavLink>"
       ],
       "system": [
-        "fontWeight"
+        "fontWeight",
+        "hover",
+        "active"
       ],
       "keywords": [
         "link"
@@ -787,7 +799,8 @@
       "props": {
         "borderWidth": 1,
         "borderTop": true,
-        "borderColor": "currentColor"
+        "borderColor": "currentColor",
+        "my": 0
       },
       "style": {},
       "examples": [
@@ -828,33 +841,39 @@
       "name": "TileTitle",
       "type": "h3",
       "props": {
-        "fontSize": [
-          4
-        ],
         "mt": 0,
-        "mb": 2
+        "mb": 1,
+        "fontSize": [
+          1,
+          2,
+          3
+        ],
+        "fontWeight": "600"
       },
       "style": {
         "textTransform": "uppercase",
-        "letterSpacing": ".075em",
+        "letterSpacing": ".15em",
         "lineHeight": "1"
       },
       "examples": [
         "<TileTitle>Hello</TileTitle>"
       ],
-      "system": []
+      "system": [
+        "fontWeight"
+      ]
     },
     {
       "name": "TileSubtitle",
       "type": "h4",
       "props": {
         "mt": 0,
-        "mb": 2,
+        "mb": 1,
         "fontSize": [
           1,
-          2
+          2,
+          3
         ],
-        "fontWeight": "700"
+        "fontWeight": "500"
       },
       "style": {},
       "examples": [
@@ -893,7 +912,7 @@
           1,
           2
         ],
-        "mt": 0
+        "my": 0
       },
       "style": {},
       "examples": [
@@ -937,9 +956,22 @@
         "TileKicker",
         "Flexbox"
       ],
-      "jsx": "<TileLink {...props}>\n  <TileImage src={props.src}>\n  <Flexbox p={3} wrap style={{ alignContent: 'flex-end', height: '100%' }}>\n\n  <TileKicker w={1} children={props.kicker} />\n    <TileTitle w={1} children={props.title} />\n    <TileSubtitle w={1} children={props.subtitle} />\n    \n    <TileText w={1} children={props.text} />\n    \n    </Flexbox>\n  </TileImage>\n</TileLink>",
+      "jsx": "<TileLink {...props}>\n  <TileImage src={props.src}>\n  <Flexbox p={4} wrap style={{ alignContent: 'flex-end', height: '100%' }}>\n\n  <TileKicker w={1} children={props.kicker} />\n    <TileTitle w={1} children={props.title} />\n    <TileSubtitle w={1} children={props.subtitle} />\n    \n    <TileText w={1} children={props.text} />\n    \n    </Flexbox>\n  </TileImage>\n</TileLink>",
       "examples": [
         "<Tile \ncolor='white'\nsrc='https://mrmrs.github.io/photos/u/017.jpg' \ntitle='This is text for a title.'\nkicker=\"27 May 2015\"\nsubtitle='By: Akil Johnson'\ntext='This is a bunch of potential text for the tile. Could be very long or very short.'\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Meta",
+      "type": "p",
+      "props": {
+        "color": "gray",
+        "fontSize": 1
+      },
+      "style": {},
+      "examples": [
+        "<Meta>Hello</Meta>"
       ],
       "system": []
     }
@@ -1141,7 +1173,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 22,
+      "y": 15,
       "moved": false,
       "static": false
     },
@@ -1181,7 +1213,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 34,
+      "y": 27,
       "moved": false,
       "static": false
     },
@@ -1381,7 +1413,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 30,
+      "y": 23,
       "moved": false,
       "static": false
     },
@@ -1421,7 +1453,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 26,
+      "y": 19,
       "moved": false,
       "static": false
     },
@@ -1448,7 +1480,7 @@
     {
       "name": "Tile",
       "i": "50",
-      "w": 6,
+      "w": 3,
       "h": 7,
       "x": 6,
       "y": 15,

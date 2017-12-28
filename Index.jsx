@@ -52,12 +52,12 @@ cards:
 tiles:
   - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg'
     title: Tile Title 2
-    subtitle: Card Subtitle
+    subtitle: Tile Subtitle
     text: Short card description.
     kicker: May 2017
   - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg'
     title: This is a tile title
-    subtitle: Card Subtitle
+    subtitle: Tile Subtitle
     text: You can edit all of this without touching markup
     kicker: May 2017
   - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg'
@@ -67,12 +67,12 @@ tiles:
     text: This is descripiton text about the tile.
     kicker: May 2017
   - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg'
-    title: Card title 3
-    subtitle: Card Subtitle
+    title: Tile title 3
+    subtitle: Tile Subtitle
     text: This is descripiton text about the tile.
     kicker: May 2017
   - src: 'https://mrmrs.github.io/photos/u/017.jpg'
-    title: Card title 4
+    title: Tile title 4
     subtitle: Card Subtitle
     text: This is descripiton text about the tile.
     kicker: May 2017
