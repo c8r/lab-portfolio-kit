@@ -22,6 +22,39 @@ links:
     href: '#0'
   - text: Link 5
     href: '#0'
+panels:
+  - src: 'https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg'
+    title: Multi-Word Panel Title
+    subtitle: Panel Subtitle
+    kicker: Featured
+    text: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    href: null
+    linkText: Click Here
+  - src: 'https://c8r.imgix.net/076e21c7efe2740c3912acb1/27.jpg'
+    title: Multi-Word Panel Title
+    subtitle: Panel Subtitle
+    kicker: Featured
+    linkText: Click Here
+    text: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.  href: #0  linkText: Click Here
+  - src: 'https://mrmrs.github.io/photos/u/063.jpg'
+    title: '2,000 Miles to Somewhere'
+    subtitle: The geography of vastness
+    text: >-
+      The US-54 W going through three states with no real discernable curves is
+      108 miles (173km) stretch of straightness. This asphalted road links
+      Liberal (county seat of Seward County) and Dalhart (Dallam County). It’s a
+      straight road running through three states (Texas, Kansas and Oklahoma)
+      for 1 h 55 min.
+    linkText: Click Here
+    href: null
 cards:
   - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg'
     title: Card Title 2
@@ -152,18 +185,33 @@ links={props.links}
 }
 <Box px={2} mb={5}>
 <SectionTitle children='Case studies' mb={4} />
-<Panel title="Panel Title" subtitle="Panel subtitle" 
-  linkText='Click here'
-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-image=' https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg'/>
-<PanelSwitch mt={3} title="Digital v. Analog" 
-subtitle="An exploration" 
-  linkText='Click here'
-text="Shot noise, produced by spontaneous fluctuations in detected photocurrents, degrades darker areas of electronic images with random variations of pixel color and brightness. Film grain becomes obvious in areas of even and delicate tone. "
-image=' https://c8r.imgix.net/076e21c7efe2740c3912acb1/27.jpg'/>
+
+
+{(props.panels || []).map((panel, index) => (
+  <Box mb={3}>
+{index % 2 == 0 &&
+  <Panel 
+     title={panel.title} 
+     subtitle={panel.subtitle}
+     linkText={panel.linkText}
+     text={panel.text}
+     image={panel.src} />
+}
+{index % 2 == 1 &&
+  <PanelSwitch
+     title={panel.title} 
+     subtitle={panel.subtitle}
+     linkText={panel.linkText}
+     text={panel.text}
+     image={panel.src} />
+}
+</Box>
+))}
+
 </Box>
 
 </Container>
+
 <footer style={{borderTop: '1px solid #bbb' }}>
 <Container pt={5} pb={4}>
 <Text mx='auto' fontSize={1}>
