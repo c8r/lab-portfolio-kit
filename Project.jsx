@@ -1,6 +1,6 @@
 ---
 image: 'https://c8r.imgix.net/2038e525b3d66825c826aafc/32.jpg'
-avatar: 'https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
+avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
 title: The Page Title
 subtitle: The page subtitle
 about: >-
