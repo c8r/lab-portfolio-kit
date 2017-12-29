@@ -4,7 +4,7 @@
 
 A UI kit for building portfolios with [Lab](https://compositor.io/lab) and [Iso](https://compositor.io/iso). Contains components and templates that you can customize and extend. It's configuration based, so you can fill in your own content and make design tweaks without writing any code. For those that want to dive deeper, you still have granular control over the markup and styles. 
 
-<img src="https://c8r.imgix.net/213bc9b8c0b2ad6c821feeaf/lab-portfolio-kit.png" style='max-width: 100%' />
+![UI kit for Lab](https://c8r.imgix.net/213bc9b8c0b2ad6c821feeaf/lab-portfolio-kit.png)
 
 ### Templates for 
 
