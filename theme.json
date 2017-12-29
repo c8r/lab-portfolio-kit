@@ -1,6 +1,6 @@
 {
   "fonts": [
-    "\"Avenir Next\", Helvetica, Arial, sans-serif"
+    "-apple-system, BlinkMacSystemFont, sans-serif"
   ],
   "space": [
     0,
