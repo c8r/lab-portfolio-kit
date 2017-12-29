@@ -109,7 +109,7 @@ links={props.links}
   </Text>
   <SectionTitle mt={6} mb={3} children='Other Projects' />
   
-  <Flex nowrap mx={-2}>
+  <Flex nowrap mx={-2} mb={4}>
 {(props.cards || []).map(card => (
   <Box px={2} mb={3} w={[1]}>
     <Tile src={card.src}
