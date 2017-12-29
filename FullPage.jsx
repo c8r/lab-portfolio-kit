@@ -1,5 +1,5 @@
 ---
-avatar: 'https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
+avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
 title: The Page Title
 subtitle: The page subtitle
 about: >-
@@ -50,7 +50,7 @@ cards:
     text: 'This is descripiton text about the card, it can be several lines long.'
 copyright: '© 2017 You, Inc.'
 ---
-<PageBG image='https://mrmrs.github.io/photos/u/050.jpg' p={5}>
+<PageBG image='https://mrmrs.github.io/photos/u/054.jpg' p={5}>
   <Flex justify='center'>
   {(props.links || []).map(link => (
     <NavLink mx={3} href={link.href} >{link.text}</NavLink>
@@ -58,7 +58,7 @@ copyright: '© 2017 You, Inc.'
   </Flex>
 <Flex align='center' justify='center' style={{height: '100%' }}>
 <Center>
-<Avatar size='96px' mx='auto'  src='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg' />
+<Avatar size='96px' mx='auto'  src={props.avatar} />
   <PageTitle  children={props.title} />
   <PageSubtitle  children={props.subtitle} />
   <Text  mx='auto' children={props.about} />
