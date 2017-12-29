@@ -38,7 +38,6 @@ panels:
     title: Multi-Word Panel Title
     subtitle: Panel Subtitle
     kicker: Featured
-    linkText: Click Here
     text: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -114,7 +113,7 @@ tiles:
 <Box>
 <Container px={3} py={3}>
 <SiteHeader 
-src='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
+src={props.avatar}
 links={props.links} 
 />
 </Container>
@@ -188,7 +187,7 @@ links={props.links}
 
 
 {(props.panels || []).map((panel, index) => (
-  <Box mb={3}>
+  <Box mb={5}>
 {index % 2 == 0 &&
   <Panel 
      title={panel.title} 
@@ -219,34 +218,34 @@ links={props.links}
 </Text>
 <Flex px={2} pt={4} pb={4} justify='center'>
   {props.twitter &&
-    <TwitterIconLink href={'https://twitter.com/'+props.twitter} />
+    <TwitterIcon href={'https://twitter.com/'+props.twitter} />
   }
   {props.github &&
-    <GitHubIconLink href={'https://github.com/'+props.github} />
+    <GitHubIcon href={'https://github.com/'+props.github} />
   }
   {props.facebook &&
-    <FacebookIconLink />
+    <FacebookIcon />
   }
   {props.instagram &&
-    <InstagramIconLink href={'https://instagram.com/'+props.instagram} />
+    <InstagramIcon href={'https://instagram.com/'+props.instagram} />
   }
    {props.dribbble &&
-    <DribbbleIconLink href={'https://dribbble.com/'+props.dribbble} />
+    <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} />
   }
   {props.pinterest &&
-    <PinterestIconLink />
+    <PinterestIcon />
   }
   {props.soundcloud &&
-    <SoundcloudIconLink />
+    <SoundcloudIcon />
   }
   {props.vimeo &&
     <VimeoIconLink />
   }
   {props.codepen && 
-    <CodepenIconLink />
+    <CodepenIcon />
   }
   {props.youtube && 
-    <YoutubeIconLink />
+    <YoutubeIcon />
   }
 </Flex>
 
@@ -264,16 +263,16 @@ links={props.links}
     <Text fontSize={0}>© 2017 You, Inc.</Text>
   </Box>
   <Flex pt={4} pb={4} justify='center' ml='auto'>
-    {props.twitter && <TwitterIconLink href={'https://twitter.com/'+props.twitter} /> }
-    {props.github && <GitHubIconLink href={'https://github.com/'+props.github} /> }
-    {props.facebook && <FacebookIconLink /> }
-    {props.instagram && <InstagramIconLink href={'https://instagram.com/'+props.instagram} /> }
-    {props.dribbble && <DribbbleIconLink href={'https://dribbble.com/'+props.dribbble} /> }
-    {props.pinterest && <PinterestIconLink /> }
-    {props.soundcloud && <SoundcloudIconLink /> }
-    {props.vimeo && <VimeoIconLink /> }
-    {props.codepen && <CodepenIconLink /> }
-    {props.youtube && <YoutubeIconLink /> }
+    {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
+    {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
+    {props.facebook && <FacebookIcon /> }
+    {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
+    {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
+    {props.pinterest && <PinterestIcon /> }
+    {props.soundcloud && <SoundcloudIcon /> }
+    {props.vimeo && <VimeoIcon /> }
+    {props.codepen && <CodepenIcon /> }
+    {props.youtube && <YoutubeIcon /> }
   </Flex>
 </Flex>
 
