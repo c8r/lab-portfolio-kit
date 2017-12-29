@@ -22,6 +22,10 @@ links:
     href: '#0'
   - text: Link 5
     href: '#0'
+footerText: >-
+  I'm currently available for contracts in Q2 of 2018.  If you're interested in
+  collaborating on a project drop me a line.
+copyright: © 2017 You, Inc.
 panels:
   - src: 'https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg'
     title: Multi-Word Panel Title
@@ -108,6 +112,7 @@ tiles:
     subtitle: Card Subtitle
     text: This is descripiton text about the tile.
     kicker: May 2017
+copyright: '© 2017 You, Inc.'
 ---
 
 <Box>
@@ -211,68 +216,44 @@ links={props.links}
 
 </Container>
 
-<footer style={{borderTop: '1px solid #bbb' }}>
-<Container pt={5} pb={4}>
-<Text mx='auto' fontSize={1}>
-  I'm currently available for contracts in Q2 of 2018. If you're interested in collaborating on a project <b style={{fontWeight: 600 }}>drop me a line</b>.
-</Text>
-<Flex px={2} pt={4} pb={4} justify='center'>
-  {props.twitter &&
-    <TwitterIcon href={'https://twitter.com/'+props.twitter} />
-  }
-  {props.github &&
-    <GitHubIcon href={'https://github.com/'+props.github} />
-  }
-  {props.facebook &&
-    <FacebookIcon />
-  }
-  {props.instagram &&
-    <InstagramIcon href={'https://instagram.com/'+props.instagram} />
-  }
-   {props.dribbble &&
-    <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} />
-  }
-  {props.pinterest &&
-    <PinterestIcon />
-  }
-  {props.soundcloud &&
-    <SoundcloudIcon />
-  }
-  {props.vimeo &&
-    <VimeoIconLink />
-  }
-  {props.codepen && 
-    <CodepenIcon />
-  }
-  {props.youtube && 
-    <YoutubeIcon />
-  }
-</Flex>
-
-<Text fontSize={0} center mx='auto'>© 2017 You, Inc.</Text>
-</Container>
+<HorizontalRule />
+<footer>
+  <Container pt={5} pb={4}>
+    <Text mx='auto' fontSize={1} children={props.footerText} />
+    <Flex px={2} pt={4} pb={4} justify='center'>
+      {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
+      {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
+      {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
+      {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
+      {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
+      {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
+      {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
+      {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
+      {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
+      {props.youtube && <YoutubeIcon href={props.youtube} /> }
+    </Flex>
+    <Text fontSize={0} center mx='auto' children={props.copyright}>
+  </Container>
 </footer>
-<footer style={{borderTop: '1px solid #bbb' }}>
+<HorizontalRule />
+<footer>
 <Container pt={5} pb={4} px={3}>
 <Flex align='center'>
   <Box w={1/2}>
-    <Text fontSize={1}>
-      I'm currently available for contracts in Q2 of 2018. If you're interested
-      in collaborating on a project drop me a line.
-    </Text>
-    <Text fontSize={0}>© 2017 You, Inc.</Text>
+    <Text fontSize={1} children={props.footerText} />
+    <Text fontSize={0} children={props.copyright} />
   </Box>
   <Flex pt={4} pb={4} justify='center' ml='auto'>
     {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
     {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-    {props.facebook && <FacebookIcon /> }
+    {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
     {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
     {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-    {props.pinterest && <PinterestIcon /> }
-    {props.soundcloud && <SoundcloudIcon /> }
-    {props.vimeo && <VimeoIcon /> }
-    {props.codepen && <CodepenIcon /> }
-    {props.youtube && <YoutubeIcon /> }
+    {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
+    {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
+    {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
+    {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
+    {props.youtube && <YoutubeIcon href={props.youtube} /> }
   </Flex>
 </Flex>
 

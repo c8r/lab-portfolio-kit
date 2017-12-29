@@ -1,9 +1,9 @@
 ---
 avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
-twitter: mrmrs_
-github: mrmrs
-instagram: mrmrs_
-dribbble: mrmrs
+twitter: username
+github: username
+instagram: username
+dribbble: username
 links:
   - text: Writing
     href: '#0'
@@ -13,6 +13,10 @@ links:
     href: '#0'
   - text: Projects
     href: '#0'
+footerText: >-
+  I'm currently available for contracts in Q2 of 2018.  If you're interested in
+  collaborating on a project drop me a line.
+copyright: © 2017 You, Inc.
 cards:
   - src: 'https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg'
   - src: 'https://c8r.imgix.net/356d05385e69997331253487/29.jpg'
@@ -81,14 +85,14 @@ cards:
       <Flex pt={4} pb={4} justify='center' ml='auto'>
         {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
         {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-        {props.facebook && <FacebookIcon /> }
+        {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
         {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
         {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-        {props.pinterest && <PinterestIcon /> }
-        {props.soundcloud && <SoundcloudIcon /> }
-        {props.vimeo && <VimeoIcon /> }
-        {props.codepen && <CodepenIcon /> }
-        {props.youtube && <YoutubeIcon /> }
+        {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
+        {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
+        {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
+        {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
+        {props.youtube && <YoutubeIcon href={props.youtube} /> }
       </Flex>
     </Flex>
   </Container>

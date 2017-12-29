@@ -21,7 +21,10 @@ links:
     href: '#0'
   - text: Link 5
     href: '#0'
-copyright: '© 2017 You, Inc.'
+footerText: >-
+  I'm currently available for contracts in Q2 of 2018.  If you're interested in
+  collaborating on a project drop me a line.
+copyright: © 2017 You, Inc.
 ---
 <PageBG image='https://mrmrs.github.io/photos/u/050.jpg' p={5}>
   <Flex justify='center'>
@@ -42,14 +45,14 @@ copyright: '© 2017 You, Inc.'
       <Flex pt={4} pb={2} justify='center' ml='auto'>
         {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
         {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-        {props.facebook && <FacebookIcon /> }
-        {props.instagram && <InstagramIcon  href={'https://instagram.com/'+props.instagram} /> }
+        {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
+        {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
         {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-        {props.pinterest && <PinterestIcon  /> }
-        {props.soundcloud && <SoundcloudIcon  /> }
-        {props.vimeo && <VimeoIcon /> }
-        {props.codepen && <CodepenIcon  /> }
-        {props.youtube && <YoutubeIcon  /> }
+        {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
+        {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
+        {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
+        {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
+        {props.youtube && <YoutubeIcon href={props.youtube} /> }
       </Flex>
      <Text  fontSize={0} center mx='auto'>{props.copyright}</Text>
     </Div>
