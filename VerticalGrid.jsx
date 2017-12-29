@@ -1,18 +1,17 @@
 ---
+avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
 twitter: mrmrs_
 github: mrmrs
 instagram: mrmrs_
 dribbble: mrmrs
 links:
-  - text: Link 1
+  - text: Writing
     href: '#0'
-  - text: Link 2
+  - text: Work
     href: '#0'
-  - text: Link 3
+  - text: Photography
     href: '#0'
-  - text: Link 4
-    href: '#0'
-  - text: Link 5
+  - text: Projects
     href: '#0'
 cards:
   - src: 'https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg'
@@ -32,75 +31,65 @@ cards:
   - src: 'https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg'
 ---
 <Container px={3} py={3}>
-<SiteHeader 
-src='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
-links={props.links} 
-/>
+  <SiteHeader 
+    src={props.avatar}
+    links={props.links} 
+  />
 </Container>
 <HorizontalRule color='#eee' />
 <Container>
-<Flex px={2} mt={3}>
-<Box w={1/3} px={2}>
-  {(props.cards || []).map((card, index) => (
-    <Box>
-    {index % 3 == 2 &&
-    <Card 
-     src={card.src}
-    
-   />
-    }
-  </Box>
-  ))}
-</Box>
-<Box w={1/3} px={2}>
-  {(props.cards || []).map((card, index) => (
-    <Box>
-    {index % 3 == 1 &&
-    <Card 
-     src={card.src}
-    
-   />
-    }
-  </Box>
-  ))}
-</Box>
-<Box w={1/3} px={2}>
-  {(props.cards || []).map((card, index) => (
-    <Box>
-    {index % 3 == 0 &&
-    <Card 
-     src={card.src}
-    
-   />
-    }
-  </Box>
-  ))}
-</Box>
-</Flex>
+  <Flex px={2} mt={3}>
+    <Box w={1/3} px={2}>
+      {(props.cards || []).map((card, index) => (
+        <Box>
+          {index % 3 == 2 && 
+            <Card src={card.src} /> 
+          }
+        </Box>
+      ))}
+    </Box>
+    <Box w={1/3} px={2}>
+      {(props.cards || []).map((card, index) => (
+        <Box>
+          {index % 3 == 1 &&
+            <Card src={card.src} />
+          }
+        </Box>
+      ))}
+    </Box>
+    <Box w={1/3} px={2}>
+      {(props.cards || []).map((card, index) => (
+        <Box>
+          {index % 3 == 0 &&
+            <Card src={card.src} />
+          }
+        </Box>
+      ))}
+    </Box>
+  </Flex>
 </Container>
 <footer style={{borderTop: '1px solid #bbb' }}>
-<Container pt={5} pb={4} px={3}>
-<Flex align='center'>
-  <Box w={1/2}>
-    <Text fontSize={1}>
-      I'm currently available for contracts in Q2 of 2018. If you're interested
-      in collaborating on a project drop me a line.
-    </Text>
-    <Text fontSize={0}>© 2017 You, Inc.</Text>
-  </Box>
-  <Flex pt={4} pb={4} justify='center' ml='auto'>
-    {props.twitter && <TwitterIconLink href={'https://twitter.com/'+props.twitter} /> }
-    {props.github && <GitHubIconLink href={'https://github.com/'+props.github} /> }
-    {props.facebook && <FacebookIconLink /> }
-    {props.instagram && <InstagramIconLink href={'https://instagram.com/'+props.instagram} /> }
-    {props.dribbble && <DribbbleIconLink href={'https://dribbble.com/'+props.dribbble} /> }
-    {props.pinterest && <PinterestIconLink /> }
-    {props.soundcloud && <SoundcloudIconLink /> }
-    {props.vimeo && <VimeoIconLink /> }
-    {props.codepen && <CodepenIconLink /> }
-    {props.youtube && <YoutubeIconLink /> }
-  </Flex>
-</Flex>
-
-</Container>
+  <Container pt={5} pb={4} px={3}>
+    <Flex align='center'>
+      <Box w={1/2}>
+        <Text fontSize={1}>
+          I'm currently available for contracts in Q2 of 2018. If you're
+          interested in collaborating on a project drop me a line.
+        </Text>
+        <Text fontSize={0}>© 2017 You, Inc.</Text>
+      </Box>
+      <Flex pt={4} pb={4} justify='center' ml='auto'>
+        {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
+        {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
+        {props.facebook && <FacebookIcon /> }
+        {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
+        {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
+        {props.pinterest && <PinterestIcon /> }
+        {props.soundcloud && <SoundcloudIcon /> }
+        {props.vimeo && <VimeoIcon /> }
+        {props.codepen && <CodepenIcon /> }
+        {props.youtube && <YoutubeIcon /> }
+      </Flex>
+    </Flex>
+  </Container>
 </footer>
