@@ -50,7 +50,7 @@ cards:
     text: 'This is descripiton text about the card, it can be several lines long.'
 copyright: '© 2017 You, Inc.'
 ---
-<PageBG image='https://mrmrs.github.io/photos/u/054.jpg' p={5}>
+<PageBG image='https://mrmrs.github.io/photos/u/050.jpg' p={5}>
   <Flex justify='center'>
   {(props.links || []).map(link => (
     <NavLink mx={3} href={link.href} >{link.text}</NavLink>

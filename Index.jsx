@@ -198,7 +198,7 @@ links={props.links}
      image={panel.src} />
 }
 {index % 2 == 1 &&
-  <PanelSwitch
+  <PanelAlt
      title={panel.title} 
      subtitle={panel.subtitle}
      linkText={panel.linkText}

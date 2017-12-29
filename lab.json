@@ -6,7 +6,7 @@
       "name": "Image",
       "type": "img",
       "props": {
-        "src": "https://c8r.imgix.net/43b5068d772a07902f9adad9/4.jpg",
+        "src": "https://c8r.imgix.net/120f3501b903b57b3b5ec654/60.jpg",
         "w": 1,
         "mb": 2
       },
@@ -142,7 +142,7 @@
         "display": "block"
       },
       "examples": [
-        "<Avatar />"
+        "<Avatar src='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg' />"
       ],
       "system": [
         "borderRadius",
@@ -219,11 +219,11 @@
         "CardText",
         "CardImage",
         "CardKicker",
-        "Box"
+        "Div"
       ],
-      "jsx": "<CardLink {...props}>\n  <CardImage src={props.src} />\n  <Box p={[2,2,0]}>\n    <CardTitle>\n      {props.title}\n    </CardTitle>\n    <CardSubtitle>\n      {props.subtitle}\n    </CardSubtitle>\n    <CardText>{props.text}</CardText>\n  </Box>\n</CardLink>",
+      "jsx": "<CardLink {...props}>\n  <CardKicker children={props.kicker} />\n  <CardImage src={props.src} />\n  <Div p={[2,2,0]}>\n    <CardTitle>\n      {props.title}\n    </CardTitle>\n    <CardSubtitle>\n      {props.subtitle}\n    </CardSubtitle>\n    <CardText>{props.text}</CardText>\n  </Div>\n</CardLink>",
       "examples": [
-        "<Card \nsrc='https://c8r.imgix.net/2ed34e78ae5d9ff95037413d/1.jpg'\ntitle='Card Title'\nsubtitle='Card Subtitle'\ntext=\"This is descripiton text about the card, it can be several lines long.\"\n\n/>"
+        "<Card \nkicker='Featured'\nsrc='https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg'\ntitle='Card Title'\nsubtitle='Card Subtitle'\ntext=\"This is descripiton text about the card, it can be several lines long.\"\n\n/>"
       ],
       "system": []
     },
@@ -233,7 +233,7 @@
       "props": {
         "borderRadius": 0,
         "w": 1,
-        "src": "https://c8r.imgix.net/2ed34e78ae5d9ff95037413d/1.jpg"
+        "src": "https://c8r.imgix.net/93b9a502bbf0c9ea5247d5a1/59.jpg"
       },
       "style": {
         "display": "block"
@@ -319,9 +319,17 @@
       "name": "CardKicker",
       "type": "h5",
       "props": {
-        "fontWeight": "800"
+        "fontWeight": "500",
+        "fontSize": 0,
+        "color": "inherit",
+        "mt": 0,
+        "mb": 2
       },
-      "style": {},
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": ".15em",
+        "opacity": 0.66
+      },
       "examples": [
         "<CardKicker>Card Kicker</CardKicker>"
       ],
@@ -370,16 +378,6 @@
       "system": []
     },
     {
-      "name": "Box",
-      "type": "div",
-      "props": {},
-      "style": {},
-      "examples": [
-        "<Box>Generic Box element</Box>"
-      ],
-      "system": []
-    },
-    {
       "name": "Svg",
       "type": "svg",
       "props": {
@@ -394,6 +392,18 @@
       },
       "examples": [
         "<Svg>\n<path d=\"M15.386.524c-4.764 0-8.64 3.876-8.64 8.64 0 4.75 3.876 8.613 8.64 8.613 4.75 0 8.614-3.864 8.614-8.613C24 4.4 20.136.524 15.386.524M.003 23.537h4.22V.524H.003\"></path>\n\n</Svg>"
+      ],
+      "system": []
+    },
+    {
+      "name": "DribbbleIconLink",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n<Svg>\n<path d=\"M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z\"></path>\n</Svg>\n</IconLink>",
+      "examples": [
+        "<DribbbleIconLink />"
       ],
       "system": []
     },
@@ -429,18 +439,6 @@
       "jsx": "<IconLink {...props}>\n  <Svg>\n    <path d=\"M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0\"></path>\n  </Svg>\n</IconLink>",
       "examples": [
         "<FacebookIconLink />"
-      ],
-      "system": []
-    },
-    {
-      "name": "DribbbleIconLink",
-      "imports": [
-        "Svg",
-        "IconLink"
-      ],
-      "jsx": "<IconLink {...props}>\n<Svg>\n<path d=\"M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z\"></path>\n</Svg>\n</IconLink>",
-      "examples": [
-        "<DribbbleIconLink />"
       ],
       "system": []
     },
@@ -538,12 +536,12 @@
       ],
       "jsx": "<Flexbox {...props} wrap>\n<Div w={[1,2/3]} pr={3}>\n  <PanelImage src={props.image} />\n  </Div>\n  <Div w={[1,1/3]} pl={[0,3]}>\n  <PanelKicker children={props.kicker} />\n  <PanelTitle children={props.title} />\n  <PanelSubtitle children={props.subtitle} />\n  <PanelText children={props.text} />\n  <PanelLink href={props.href} children={props.linkText} />\n  </Div>\n</Flexbox>",
       "examples": [
-        "<Panel kicker='Featured' title=\"Panel Title\" subtitle=\"Panel subtitle\" \ntext=\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectok.\"\nlinkText='Read More'\nimage='https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg'/>"
+        "<Panel kicker='Featured' title=\"Panel Title\" subtitle=\"Panel subtitle\" \ntext=\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectok.\"\nlinkText='Read More'\nimage='https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg'/>"
       ],
       "system": []
     },
     {
-      "name": "PanelSwitch",
+      "name": "PanelAlt",
       "imports": [
         "Flexbox",
         "Div",
@@ -555,7 +553,7 @@
       ],
       "jsx": "<Flexbox {...props} wrap>\n\n  <Div w={[1,1/3]}>\n  <PanelTitle children={props.title} />\n  <PanelSubtitle children={props.subtitle} />\n  <PanelText children={props.text} />\n  <PanelLink href={props.href} children={props.linkText} />\n  </Div>\n  <Div w={[1,2/3]} pl={[0,3]}>\n  <PanelImage mt={[3,0]} src={props.image} />\n  </Div>\n</Flexbox>",
       "examples": [
-        "<PanelSwitch title=\"Panel Title\" subtitle=\"Panel subtitle\" \ntext=\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectok.\"\nlinkText='Read More'\nimage='https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg'/>"
+        "<PanelAlt title=\"Panel Title\" subtitle=\"Panel subtitle\" \ntext=\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectok.\"\nlinkText='Read More'\nimage='https://c8r.imgix.net/120f3501b903b57b3b5ec654/60.jpg'/>"
       ],
       "system": []
     },
@@ -595,13 +593,17 @@
       },
       "style": {
         "textTransform": "uppercase",
-        "letterSpacing": ".075em"
+        "letterSpacing": "0.075em"
       },
       "examples": [
         "<PanelSubtitle>Hello</PanelSubtitle>"
       ],
       "system": [
         "fontWeight"
+      ],
+      "keywords": [
+        "panel",
+        "subtitle"
       ]
     },
     {
@@ -622,7 +624,7 @@
       "props": {
         "w": 1,
         "borderRadius": 2,
-        "src": "https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg",
+        "src": "https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg",
         "borderWidth": 1,
         "borderColor": "lightgray",
         "px": 2,
@@ -766,7 +768,7 @@
       "type": "div",
       "props": {
         "w": "100vw",
-        "image": "https://mrmrs.github.io/photos/u/022.jpg"
+        "image": "https://c8r.imgix.net/f8da22397269de121c3e900e/67.jpg"
       },
       "style": {
         "height": "${props.half? '50vh': '100vh'}",
@@ -802,7 +804,7 @@
       ],
       "jsx": "<header>\n<Flexbox>\n  <Avatar src={props.src} />\n  <Div ml='auto'>\n  {(props.links || []).map(link => (\n    <NavLink href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
       "examples": [
-        "<SiteHeader \nsrc='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'\nlinks={[\n  {\n    href: '#0', \n    text: 'link 1' \n  },\n  {\n    href: '#0', \n    text: 'link 2' \n  },\n  {\n    href: '#0', \n    text: 'link 3' \n  }\n    ]} />"
+        "<SiteHeader \nsrc='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'\nlinks={[\n  {\n    href: '#0', \n    text: 'Writing' \n  },\n  {\n    href: '#0', \n    text: 'Work' \n  },\n  {\n    href: '#0', \n    text: 'projects' \n  },\n  {\n    href: '#0', \n    text: 'Case Studies' \n  },\n   {\n    href: '#0', \n    text: 'hi@email.com' \n  },\n    ]} />"
       ],
       "system": []
     },
@@ -866,7 +868,7 @@
         "lineHeight": "1"
       },
       "examples": [
-        "<TileTitle>Hello</TileTitle>"
+        "<TileTitle>Tile Title Example</TileTitle>"
       ],
       "system": [
         "fontWeight"
@@ -889,7 +891,7 @@
         "letterSpacing": ".075em"
       },
       "examples": [
-        "<TileSubtitle>Hello</TileSubtitle>"
+        "<TileSubtitle>A Tile Subtitle</TileSubtitle>"
       ],
       "system": [
         "fontWeight"
@@ -910,7 +912,8 @@
         "alignItems": "top"
       },
       "examples": [
-        "<TileKicker>Hello</TileKicker>"
+        "<TileKicker>Jun 2017</TileKicker>",
+        "<TileKicker>BY: Author Name</TileKicker>"
       ],
       "system": [
         "fontWeight"
@@ -928,7 +931,7 @@
       },
       "style": {},
       "examples": [
-        "<TileText />"
+        "<TileText children='A bunch of description text' />"
       ],
       "system": []
     },
@@ -937,7 +940,7 @@
       "type": "div",
       "props": {
         "w": 1,
-        "src": "https://mrmrs.github.io/photos/u/017.jpg"
+        "src": "https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg"
       },
       "style": {
         "position": "absolute",
@@ -970,7 +973,7 @@
       ],
       "jsx": "<TileLink {...props}>\n  <TileImage src={props.src}>\n  <Flexbox p={4} wrap style={{ alignContent: 'flex-end', height: '100%' }}>\n\n  <TileKicker w={1} children={props.kicker} />\n    <TileTitle w={1} children={props.title} />\n    <TileSubtitle w={1} children={props.subtitle} />\n    \n    <TileText w={1} children={props.text} />\n    \n    </Flexbox>\n  </TileImage>\n</TileLink>",
       "examples": [
-        "<Tile \ncolor='white'\nsrc='https://mrmrs.github.io/photos/u/017.jpg' \ntitle='This is text for a title.'\nkicker=\"27 May 2015\"\nsubtitle='By: Akil Johnson'\ntext='This is a bunch of potential text for the tile. Could be very long or very short.'\n/>"
+        "<Tile \ncolor='white'\nsrc='https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg' \ntitle='This is text for a title.'\nkicker=\"27 May 2015\"\nsubtitle='By: Akil Johnson'\ntext='This is a bunch of potential text for the tile. Could be very long or very short.'\n/>"
       ],
       "system": []
     },
@@ -1001,7 +1004,7 @@
         "letterSpacing": "0.075em"
       },
       "examples": [
-        "<PanelKicker>Hello</PanelKicker>"
+        "<PanelKicker>June 2017</PanelKicker>"
       ],
       "system": [
         "fontWeight"
@@ -1074,9 +1077,9 @@
       "name": "Image",
       "i": "0",
       "w": 3,
-      "h": 6,
+      "h": 4,
       "x": 0,
-      "y": 54,
+      "y": 19,
       "moved": false,
       "static": false
     },
@@ -1084,8 +1087,8 @@
       "name": "NavLink",
       "i": "1",
       "w": 1,
-      "h": 2,
-      "x": 8,
+      "h": 3,
+      "x": 7,
       "y": 0,
       "moved": false,
       "static": false
@@ -1093,20 +1096,20 @@
     {
       "name": "TextLink",
       "i": "2",
-      "w": 1,
-      "h": 2,
+      "w": 3,
+      "h": 4,
       "x": 6,
-      "y": 0,
+      "y": 39,
       "moved": false,
       "static": false
     },
     {
       "name": "BlockLink",
       "i": "3",
-      "w": 1,
-      "h": 2,
-      "x": 7,
-      "y": 0,
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 35,
       "moved": false,
       "static": false
     },
@@ -1115,8 +1118,8 @@
       "i": "4",
       "w": 1,
       "h": 3,
-      "x": 3,
-      "y": 24,
+      "x": 6,
+      "y": 0,
       "moved": false,
       "static": false
     },
@@ -1124,19 +1127,19 @@
       "name": "PageTitle",
       "i": "5",
       "w": 3,
-      "h": 2,
-      "x": 9,
-      "y": 0,
+      "h": 4,
+      "x": 3,
+      "y": 32,
       "moved": false,
       "static": false
     },
     {
       "name": "PageSubtitle",
       "i": "6",
-      "w": 2,
-      "h": 2,
-      "x": 9,
-      "y": 2,
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 67,
       "moved": false,
       "static": false
     },
@@ -1144,9 +1147,9 @@
       "name": "Card",
       "i": "7",
       "w": 3,
-      "h": 9,
+      "h": 12,
       "x": 0,
-      "y": 35,
+      "y": 3,
       "moved": false,
       "static": false
     },
@@ -1156,7 +1159,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 50,
+      "y": 15,
       "moved": false,
       "static": false
     },
@@ -1164,19 +1167,19 @@
       "name": "CardTitle",
       "i": "9",
       "w": 3,
-      "h": 2,
-      "x": 0,
-      "y": 44,
+      "h": 4,
+      "x": 3,
+      "y": 28,
       "moved": false,
       "static": false
     },
     {
       "name": "CardSubtitle",
       "i": "10",
-      "w": 1,
-      "h": 2,
-      "x": 0,
-      "y": 46,
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 43,
       "moved": false,
       "static": false
     },
@@ -1184,245 +1187,95 @@
       "name": "CardText",
       "i": "11",
       "w": 3,
-      "h": 2,
-      "x": 0,
-      "y": 48,
+      "h": 4,
+      "x": 9,
+      "y": 55,
       "moved": false,
       "static": false
     },
     {
       "name": "CardKicker",
       "i": "12",
-      "w": 2,
-      "h": 2,
-      "x": 1,
-      "y": 46,
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 43,
       "moved": false,
       "static": false
     },
     {
       "name": "CardLink",
       "i": "13",
-      "w": 1,
+      "w": 3,
       "h": 2,
-      "x": 6,
-      "y": 2,
+      "x": 3,
+      "y": 18,
       "moved": false,
       "static": false
     },
     {
       "name": "Container",
       "i": "14",
-      "w": 1,
-      "h": 3,
-      "x": 9,
-      "y": 4,
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 71,
       "moved": false,
       "static": false
     },
     {
       "name": "Box",
       "i": "15",
-      "w": 1,
-      "h": 2,
-      "x": 10,
-      "y": 4,
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 67,
       "moved": false,
       "static": false
     },
     {
       "name": "Svg",
       "i": "16",
-      "w": 1,
-      "h": 2,
-      "x": 5,
-      "y": 0,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "TwitterIcon",
-      "i": "17",
-      "w": 3,
-      "h": 4,
-      "x": 6,
-      "y": 35,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "GitHubIcon",
-      "i": "18",
-      "w": 3,
-      "h": 4,
-      "x": 6,
-      "y": 31,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "DribbbleIcon",
-      "i": "19",
-      "w": 3,
-      "h": 4,
-      "x": 9,
-      "y": 24,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "FacebookIcon",
-      "i": "20",
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 64,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "InstagramIcon",
-      "i": "21",
-      "w": 3,
-      "h": 4,
-      "x": 3,
-      "y": 31,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "FlickrIcon",
-      "i": "22",
-      "w": 3,
-      "h": 4,
-      "x": 6,
-      "y": 4,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "MastodonIcon",
-      "i": "23",
-      "w": 3,
-      "h": 4,
-      "x": 9,
-      "y": 36,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "PinterestIcon",
-      "i": "24",
-      "w": 3,
-      "h": 4,
-      "x": 4,
-      "y": 39,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "SoundcloudIcon",
-      "i": "25",
-      "w": 3,
-      "h": 4,
-      "x": 3,
-      "y": 27,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "YoutubeIcon",
-      "i": "26",
-      "w": 3,
-      "h": 4,
-      "x": 6,
-      "y": 27,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "VimeoIcon",
-      "i": "27",
-      "w": 3,
-      "h": 4,
-      "x": 9,
-      "y": 7,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "CodepenIcon",
-      "i": "28",
-      "w": 3,
-      "h": 4,
-      "x": 0,
-      "y": 60,
+      "y": 47,
       "moved": false,
       "static": false
     },
     {
       "name": "TwitterIconLink",
-      "i": "29",
+      "i": "17",
       "w": 1,
       "h": 2,
-      "x": 5,
-      "y": 24,
+      "x": 3,
+      "y": 12,
       "moved": false,
       "static": false
     },
     {
       "name": "GitHubIconLink",
-      "i": "30",
+      "i": "18",
       "w": 1,
       "h": 2,
-      "x": 5,
-      "y": 2,
+      "x": 3,
+      "y": 14,
       "moved": false,
       "static": false
     },
     {
       "name": "FacebookIconLink",
-      "i": "31",
+      "i": "19",
       "w": 1,
       "h": 2,
       "x": 4,
-      "y": 24,
+      "y": 16,
       "moved": false,
       "static": false
     },
     {
       "name": "DribbbleIconLink",
-      "i": "32",
-      "w": 1,
-      "h": 2,
-      "x": 5,
-      "y": 22,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "InstagramIconLink",
-      "i": "33",
-      "w": 1,
-      "h": 2,
-      "x": 4,
-      "y": 22,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "PinterestIconLink",
-      "i": "34",
-      "w": 1,
-      "h": 2,
-      "x": 4,
-      "y": 2,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "YoutubeIconLink",
-      "i": "35",
+      "i": "20",
       "w": 1,
       "h": 2,
       "x": 3,
@@ -1431,42 +1284,192 @@
       "static": false
     },
     {
-      "name": "CodepenIconLink",
-      "i": "36",
+      "name": "InstagramIconLink",
+      "i": "21",
       "w": 1,
       "h": 2,
-      "x": 3,
-      "y": 2,
+      "x": 4,
+      "y": 12,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PinterestIconLink",
+      "i": "22",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 14,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "YoutubeIconLink",
+      "i": "23",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "CodepenIconLink",
+      "i": "24",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 14,
       "moved": false,
       "static": false
     },
     {
       "name": "VimeoIconLink",
-      "i": "37",
+      "i": "25",
       "w": 1,
       "h": 2,
-      "x": 3,
-      "y": 22,
+      "x": 5,
+      "y": 12,
       "moved": false,
       "static": false
     },
     {
       "name": "IconLink",
-      "i": "38",
-      "w": 2,
-      "h": 2,
-      "x": 3,
-      "y": 0,
+      "i": "26",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 59,
       "moved": false,
       "static": false
     },
     {
       "name": "Panel",
+      "i": "27",
+      "w": 6,
+      "h": 13,
+      "x": 6,
+      "y": 3,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PanelAlt",
+      "i": "28",
+      "w": 6,
+      "h": 15,
+      "x": 6,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PanelTitle",
+      "i": "29",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 44,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PanelSubtitle",
+      "i": "30",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 31,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PanelText",
+      "i": "31",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 43,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PanelImage",
+      "i": "32",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 31,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "PanelLink",
+      "i": "33",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 35,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Flexbox",
+      "i": "34",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 47,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Text",
+      "i": "35",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 63,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "SectionTitle",
+      "i": "36",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 39,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Div",
+      "i": "37",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 40,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Caps",
+      "i": "38",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 63,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Capitalize",
       "i": "39",
       "w": 3,
-      "h": 15,
-      "x": 0,
-      "y": 20,
+      "h": 4,
+      "x": 9,
+      "y": 47,
       "moved": false,
       "static": false
     },
@@ -1476,7 +1479,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 12,
+      "y": 23,
       "moved": false,
       "static": false
     },
@@ -1486,7 +1489,7 @@
       "w": 3,
       "h": 4,
       "x": 3,
-      "y": 18,
+      "y": 24,
       "moved": false,
       "static": false
     },
@@ -1494,19 +1497,19 @@
       "name": "SiteHeader",
       "i": "42",
       "w": 6,
-      "h": 4,
-      "x": 6,
-      "y": 12,
+      "h": 3,
+      "x": 0,
+      "y": 0,
       "moved": false,
       "static": false
     },
     {
       "name": "HorizontalRule",
       "i": "43",
-      "w": 3,
-      "h": 4,
-      "x": 9,
-      "y": 32,
+      "w": 4,
+      "h": 3,
+      "x": 8,
+      "y": 0,
       "moved": false,
       "static": false
     },
@@ -1516,7 +1519,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 8,
+      "y": 35,
       "moved": false,
       "static": false
     },
@@ -1526,7 +1529,7 @@
       "w": 3,
       "h": 4,
       "x": 3,
-      "y": 8,
+      "y": 36,
       "moved": false,
       "static": false
     },
@@ -1536,7 +1539,7 @@
       "w": 3,
       "h": 4,
       "x": 6,
-      "y": 23,
+      "y": 51,
       "moved": false,
       "static": false
     },
@@ -1546,7 +1549,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 28,
+      "y": 39,
       "moved": false,
       "static": false
     },
@@ -1556,7 +1559,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 16,
+      "y": 31,
       "moved": false,
       "static": false
     },
@@ -1564,9 +1567,9 @@
       "name": "TileImage",
       "i": "49",
       "w": 3,
-      "h": 4,
+      "h": 2,
       "x": 3,
-      "y": 12,
+      "y": 10,
       "moved": false,
       "static": false
     },
@@ -1575,8 +1578,8 @@
       "i": "50",
       "w": 3,
       "h": 7,
-      "x": 6,
-      "y": 16,
+      "x": 3,
+      "y": 3,
       "moved": false,
       "static": false
     },
@@ -1586,7 +1589,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 20,
+      "y": 51,
       "moved": false,
       "static": false
     },
@@ -1596,7 +1599,7 @@
       "w": 3,
       "h": 4,
       "x": 0,
-      "y": 4,
+      "y": 27,
       "moved": false,
       "static": false
     },
@@ -1606,17 +1609,17 @@
       "w": 3,
       "h": 4,
       "x": 3,
-      "y": 4,
+      "y": 20,
       "moved": false,
       "static": false
     },
     {
-      "name": "ListItemLink",
+      "name": "ListItem",
       "i": "54",
       "w": 3,
       "h": 4,
       "x": 6,
-      "y": 8,
+      "y": 55,
       "moved": false,
       "static": false
     },
@@ -1626,17 +1629,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 16,
-      "moved": false,
-      "static": false
-    },
-    {
-      "name": "LinkList",
-      "i": "56",
-      "w": 3,
-      "h": 4,
-      "x": 0,
-      "y": 0,
+      "y": 59,
       "moved": false,
       "static": false
     }
