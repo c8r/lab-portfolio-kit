@@ -31,7 +31,12 @@ git clone git@github.com:c8r/lab-portfolio-kit.git your-project
 ```
 
 Open Lab and go to File > Open project...
+
 ![Open a project in Lab](https://c8r.imgix.net/962c933490eb36b875da5000/open.png)
+
+The ui elements will now be loaded in Lab. Feel free to edit and tweak their designs.
+
+Open Iso and navigate to the directory of your project. Open any of the .jsx files to edit or view the templates.
 
 ### Configuration
 
