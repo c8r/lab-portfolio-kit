@@ -114,15 +114,14 @@ tiles:
     kicker: May 2017
 copyright: '© 2017 You, Inc.'
 ---
-
 <Box>
-<Container px={3} py={3}>
-<SiteHeader 
-src={props.avatar}
-links={props.links} 
-/>
-</Container>
-<HorizontalRule color='#eee' />
+  <Container px={3} py={3}>
+    <SiteHeader 
+      src={props.avatar}
+      links={props.links} 
+    />
+  </Container>
+  <HorizontalRule color='#eee' />
 </Box>
 <Box pt={5} pb={5}>
  <Container px={3}>
@@ -138,84 +137,79 @@ links={props.links}
   </Container>
 </Box>
 <Container pb={5} px={2}>
-<SectionTitle children='Projects' mx={2} />
-<Flex wrap mx={0}>
-{(props.cards || []).map((card, index) => (
-  <Box px={2} mb={4} w={[1,1/3]}>
-    <Card 
-     src={card.src}
-     title={card.title}
-     subtitle={card.subtitle}
-     text={card.text}
-   />
-  </Box>
-))}
-
-</Flex>
+  <SectionTitle children='Projects' mx={2} />
+  <Flex wrap mx={0}>
+    {(props.cards || []).map((card, index) => (
+      <Box px={2} mb={4} w={[1,1/3]}>
+        <Card 
+         src={card.src}
+         title={card.title}
+         subtitle={card.subtitle}
+         text={card.text}
+       />
+      </Box>
+    ))}
+  </Flex>
 <SectionTitle children='Work' mx={2} />
 
 {props.tiles.length%2 == 1 &&
-<Flex color='white' wrap mx={0}>
-{(props.tiles || []).map((tile, index) => (
-  <Box px={2} mb={4}e w={index === props.tiles.length -1 ? 1 : [1, 1/2]}>
-    <Tile 
-     color={tile.color}
-     src={tile.src}
-     title={tile.title}
-     subtitle={tile.subtitle}
-     kicker={tile.kicker}
-     text={tile.text}
-   />
-  </Box>
-))}
-</Flex>
+  <Flex color='white' wrap mx={0}>
+  {(props.tiles || []).map((tile, index) => (
+    <Box px={2} mb={4}e w={index === props.tiles.length -1 ? 1 : [1, 1/2]}>
+      <Tile 
+       color={tile.color}
+       src={tile.src}
+       title={tile.title}
+       subtitle={tile.subtitle}
+       kicker={tile.kicker}
+       text={tile.text}
+     />
+    </Box>
+  ))}
+  </Flex>
 }
 
 {props.tiles.length%2 == 0 &&
-<Flex color='white' wrap mx={0}>
-{(props.tiles || []).map((tile, index) => (
-  <Box px={2} mb={4} w={[1, 1/2]}>
-    <Tile 
-     color={tile.color}
-     src={tile.src}
-     title={tile.title}
-     subtitle={tile.subtitle}
-     kicker={tile.kicker}
-     text={tile.text}
-   />
+  <Flex color='white' wrap mx={0}>
+    {(props.tiles || []).map((tile, index) => (
+      <Box px={2} mb={4} w={[1, 1/2]}>
+        <Tile 
+         color={tile.color}
+         src={tile.src}
+         title={tile.title}
+         subtitle={tile.subtitle}
+         kicker={tile.kicker}
+         text={tile.text}
+       />
+      </Box>
+    ))}
+  </Flex>
+}
+
+  <Box px={2} mb={5}>
+    <SectionTitle children='Case studies' mb={4} />
+    {(props.panels || []).map((panel, index) => (
+      <Box mb={5}>
+        {index % 2 == 0 &&
+          <Panel 
+             title={panel.title} 
+             subtitle={panel.subtitle}
+             linkText={panel.linkText}
+             text={panel.text}
+             image={panel.src} />
+        }
+        {index % 2 == 1 &&
+          <PanelAlt
+             title={panel.title} 
+             subtitle={panel.subtitle}
+             linkText={panel.linkText}
+             text={panel.text}
+             image={panel.src} />
+        }
+      </Box>
+    ))}
   </Box>
-))}
-</Flex>
-}
-<Box px={2} mb={5}>
-<SectionTitle children='Case studies' mb={4} />
-
-
-{(props.panels || []).map((panel, index) => (
-  <Box mb={5}>
-{index % 2 == 0 &&
-  <Panel 
-     title={panel.title} 
-     subtitle={panel.subtitle}
-     linkText={panel.linkText}
-     text={panel.text}
-     image={panel.src} />
-}
-{index % 2 == 1 &&
-  <PanelAlt
-     title={panel.title} 
-     subtitle={panel.subtitle}
-     linkText={panel.linkText}
-     text={panel.text}
-     image={panel.src} />
-}
-</Box>
-))}
-
-</Box>
-
 </Container>
-
 <HorizontalRule />
 <footer>
   <Container pt={5} pb={4}>
@@ -237,25 +231,24 @@ links={props.links}
 </footer>
 <HorizontalRule />
 <footer>
-<Container pt={5} pb={4} px={3}>
-<Flex align='center'>
-  <Box w={1/2}>
-    <Text fontSize={1} children={props.footerText} />
-    <Text fontSize={0} children={props.copyright} />
-  </Box>
-  <Flex pt={4} pb={4} justify='center' ml='auto'>
-    {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
-    {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-    {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
-    {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
-    {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-    {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
-    {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
-    {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
-    {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
-    {props.youtube && <YoutubeIcon href={props.youtube} /> }
-  </Flex>
-</Flex>
-
-</Container>
+  <Container pt={5} pb={4} px={3}>
+    <Flex align='center'>
+      <Box w={1/2}>
+        <Text fontSize={1} children={props.footerText} />
+        <Text fontSize={0} children={props.copyright} />
+      </Box>
+      <Flex pt={4} pb={4} justify='center' ml='auto'>
+        {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
+        {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
+        {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
+        {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
+        {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
+        {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
+        {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
+        {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
+        {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
+        {props.youtube && <YoutubeIcon href={props.youtube} /> }
+      </Flex>
+    </Flex>
+  </Container>
 </footer>
