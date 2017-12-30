@@ -1,6 +1,6 @@
 {
   "name": "lab-portfolio-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A set of ui components and templates for building a portfolio.",
   "main": "Index.jsx",
   "scripts": {
