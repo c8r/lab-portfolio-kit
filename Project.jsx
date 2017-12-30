@@ -1,25 +1,11 @@
 ---
-image: 'https://c8r.imgix.net/2038e525b3d66825c826aafc/32.jpg'
-avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
+image: 'https://c8r.imgix.net/2038e525b3d66825c826aafc/32.jpg?w=1920&fit=clip'
+avatar: 'https://c8r.imgix.net/2f0fcc1fb83e96acbad86ff2/dean.jpg'
 twitter: username
 github: username
 instagram: username
 dribbble: username
 codepen: url
-# behance: username
-# vimeo: username
-# youtube: url
-# soundcloud: username
-# facebook: url
-# pinterest: url
-# snapchat: url
-# kickstarter: url
-# npm: url
-# stackoverflow: url
-# producthunt: url
-# linkedin: url
-# etsy: url
-# slack: url
 title: The Page Title
 subtitle: The page subtitle
 text: >-
@@ -43,6 +29,10 @@ links:
     href: '#0'
   - text: Link 5
     href: '#0'
+footerText: >-
+  I'm currently available for contracts in Q2 of 2018.  If you're interested in
+  collaborating on a project drop me a line.
+copyright: '© 2017 You, Inc.'
 cards:
   - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=720&fit=clip'
     title: Card Title 2

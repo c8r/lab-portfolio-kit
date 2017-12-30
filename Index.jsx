@@ -1,24 +1,10 @@
 ---
-avatar: 'https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
+avatar: 'https://c8r.imgix.net/2f0fcc1fb83e96acbad86ff2/dean.jpg'
 twitter: username
 github: username
 instagram: username
 dribbble: username
 codepen: url
-# behance: username
-# vimeo: username
-# youtube: url
-# soundcloud: username
-# facebook: url
-# pinterest: url
-# snapchat: url
-# kickstarter: url
-# npm: url
-# stackoverflow: url
-# producthunt: url
-# linkedin: url
-# etsy: url
-# slack: url
 links:
   - text: Link 1
     href: '#0'
@@ -34,11 +20,14 @@ footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
 copyright: '© 2017 You, Inc.'
-title: The Page Title
-subtitle: The page subtitle
-text: Some description text
+title: A page title
+subtitle: A page subtitle for secondary info
+text: >-
+  A text description. Duis aute irure dolor in reprehenderit in voluptate velit
+  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+  non proident
 panels:
-  - src: 'https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg'
+  - src: 'https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg?w=1244&fit=clip'
     title: Multi-Word Panel Title
     subtitle: Panel Subtitle
     kicker: Featured
@@ -49,7 +38,7 @@ panels:
       commodo consequat.
     href: null
     linkText: Click Here
-  - src: 'https://c8r.imgix.net/076e21c7efe2740c3912acb1/27.jpg'
+  - src: 'https://c8r.imgix.net/076e21c7efe2740c3912acb1/27.jpg?w=1244&fit=clip'
     title: Multi-Word Panel Title
     subtitle: Panel Subtitle
     kicker: Featured
@@ -70,55 +59,55 @@ panels:
     linkText: Click Here
     href: null
 cards:
-  - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg'
+  - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=1244&fit=clip'
     title: Card Title 2
     subtitle: Card Subtitle
     text: Short card description.
-  - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg'
+  - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg?w=1244&fit=clip'
     title: This is a card title
     subtitle: Card Subtitle
     text: You can edit all of this without touching markup
-  - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg'
+  - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg?w=1244&fit=clip'
     title: Card title 3
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg'
+  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=1244&fit=clip'
     title: Card title 3
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg'
+  - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg?w=1244&fit=clip'
     title: Card Title 2
     subtitle: >-
       Card Subtitle that wraps on to multiple lines so we can see what will
       happen with stacking
     text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg'
+  - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg?w=1244&fit=clip'
     title: Card Title 1
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
 tiles:
-  - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg'
+  - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=1244&fit=clip'
     title: Tile Title 2
     subtitle: Tile Subtitle
     text: Short card description.
     kicker: May 2017
-  - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg'
+  - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg?w=1244&fit=clip'
     title: This is a tile title
     subtitle: Tile Subtitle
     text: You can edit all of this without touching markup
     kicker: May 2017
-  - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg'
+  - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg?w=1244&fit=clip'
     color: black
     title: Tile title 3
     subtitle: Tile Subtitle
     text: This is descripiton text about the tile.
     kicker: May 2017
-  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg'
+  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=1244&fit=clip'
     title: Tile title 3
     subtitle: Tile Subtitle
     text: This is descripiton text about the tile.
     kicker: May 2017
-  - src: 'https://mrmrs.github.io/photos/u/017.jpg'
+  - src: 'https://mrmrs.github.io/photos/u/017.jpg?w=1244&fit=clip'
     title: Tile title 4
     subtitle: Card Subtitle
     text: This is descripiton text about the tile.

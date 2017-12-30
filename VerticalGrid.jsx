@@ -1,24 +1,10 @@
 ---
-avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
+avatar: 'https://c8r.imgix.net/2f0fcc1fb83e96acbad86ff2/dean.jpg'
 twitter: username
 github: username
 instagram: username
 dribbble: username
 codepen: url
-# behance: username
-# vimeo: username
-# youtube: url
-# soundcloud: username
-# facebook: url
-# pinterest: url
-# snapchat: url
-# kickstarter: url
-# npm: url
-# stackoverflow: url
-# producthunt: url
-# linkedin: url
-# etsy: url
-# slack: url
 links:
   - text: Writing
     href: '#0'
@@ -33,21 +19,21 @@ footerText: >-
   collaborating on a project drop me a line.
 copyright: '© 2017 You, Inc.'
 cards:
-  - src: 'https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg'
-  - src: 'https://c8r.imgix.net/356d05385e69997331253487/29.jpg'
-  - src: 'https://c8r.imgix.net/0c51ababccfefd05c14827de/30.jpg'
-  - src: 'https://c8r.imgix.net/88519cde3698506f6f10ce34/31.jpg'
-  - src: 'https://c8r.imgix.net/2038e525b3d66825c826aafc/32.jpg'
-  - src: 'https://c8r.imgix.net/75797f801db96f8797caa8b2/33.jpg'
-  - src: 'https://c8r.imgix.net/bed2c1324f4748020a76a545/34.jpg'
-  - src: 'https://c8r.imgix.net/1501a9e181eda57497300742/35.jpg'
-  - src: 'https://c8r.imgix.net/e3c742a388091c7e3b3806fc/36.jpg'
-  - src: 'https://c8r.imgix.net/0588cbf345f8020349d0da52/37.jpg'
-  - src: 'https://c8r.imgix.net/64189ed683715bddda4a32f1/38.jpg'
-  - src: 'https://c8r.imgix.net/d1b73c79bbd93fbc0bda09e4/39.jpg'
-  - src: 'https://c8r.imgix.net/0393a0b00d15f14dbd13a347/40.jpg'
-  - src: 'https://c8r.imgix.net/0a6a7981262526c566ca137f/41.jpg'
-  - src: 'https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg'
+  - src: 'https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/356d05385e69997331253487/29.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/0c51ababccfefd05c14827de/30.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/88519cde3698506f6f10ce34/31.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/2038e525b3d66825c826aafc/32.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/75797f801db96f8797caa8b2/33.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/bed2c1324f4748020a76a545/34.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/1501a9e181eda57497300742/35.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/e3c742a388091c7e3b3806fc/36.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/0588cbf345f8020349d0da52/37.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/64189ed683715bddda4a32f1/38.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/d1b73c79bbd93fbc0bda09e4/39.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/0393a0b00d15f14dbd13a347/40.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/0a6a7981262526c566ca137f/41.jpg?w=720&fit=clip'
+  - src: 'https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg?w=720&fit=clip'
 ---
 <Container px={3} py={3}>
   <SiteHeader 

@@ -5,20 +5,6 @@ github: username
 instagram: username
 dribbble: username
 codepen: url
-# behance: username
-# vimeo: username
-# youtube: url
-# soundcloud: username
-# facebook: url
-# pinterest: url
-# snapchat: url
-# kickstarter: url
-# npm: url
-# stackoverflow: url
-# producthunt: url
-# linkedin: url
-# etsy: url
-# slack: url
 links:
   - text: Link 1
     href: '#0'
@@ -34,7 +20,7 @@ footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
 copyright: '© 2017 You, Inc.'
-image: 'https://c8r.imgix.net/59b19cfb647d327d75bc316c/63.jpg'
+image: 'https://c8r.imgix.net/59b19cfb647d327d75bc316c/63.jpg?w=1920&fit=clip'
 title: About
 subtitle: A brief incomplete history
 text: Started out as a single-celled organism. Currently a multi-celled organism.

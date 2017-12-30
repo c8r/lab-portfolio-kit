@@ -1,24 +1,10 @@
 ---
-avatar: 'https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg'
+avatar: 'https://c8r.imgix.net/2f0fcc1fb83e96acbad86ff2/dean.jpg'
 twitter: username
 github: username
 instagram: username
 dribbble: username
 codepen: url
-# behance: username
-# vimeo: username
-# youtube: url
-# soundcloud: username
-# facebook: url
-# pinterest: url
-# snapchat: url
-# kickstarter: url
-# npm: url
-# stackoverflow: url
-# producthunt: url
-# linkedin: url
-# etsy: url
-# slack: url
 links:
   - text: Link 1
     href: '#0'
