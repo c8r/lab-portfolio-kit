@@ -24,34 +24,34 @@ links:
   - text: Link 5
     href: '#0'
 cards:
-  - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg'
+  - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=720&fit=clip'
     title: Card Title 2
     subtitle: Card Subtitle
     text: Short card description.
     link: null
-  - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg'
+  - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg?w=720&fit=clip'
     title: This is a card title
     subtitle: Card Subtitle
     text: You can edit all of this without touching markup
     link: null
-  - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg'
+  - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg?w=720&fit=clip'
     title: Card title 3
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
     link: null
-  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg'
+  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=720&fit=clip'
     title: Card title 3
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
     link: null
-  - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg'
+  - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg?w=720&fit=clip'
     title: Card Title 2
     subtitle: >-
       Card Subtitle that wraps on to multiple lines so we can see what will
       happen with stacking
     text: 'This is descripiton text about the card, it can be several lines long.'
     link: null
-  - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg'
+  - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg?w=720&fit=clip'
     title: Card Title 1
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
@@ -80,28 +80,28 @@ links={props.links}
  <SectionTitle children='Product Shots' />
  <Flex wrap mx={-2}>
  <Box w={1/3} px={2}>
-  <Image mb={3} src='https://c8r.imgix.net/0588cbf345f8020349d0da52/37.jpg' />
+  <Image mb={3} src='https://c8r.imgix.net/0588cbf345f8020349d0da52/37.jpg?w=1920&fit=clip' />
   <Meta>
     Description for the product image. 
   </Meta>
  </Box>
   <Box w={1/3} px={2}>
-  <Image src='https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg' />
+  <Image src='https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg?w=1920&fit=clip' />
    <Meta>
     Description for the product image. 
   </Meta>
  </Box>
    <Box w={1/3} px={2}>
-  <Image src='https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg' />
+  <Image src='https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg?w=1920&fit=clip' />
    <Meta>
     Description for the product image. 
   </Meta>
  </Box>
  <Box w={1} mt={3} px={2}>
- <Image src='https://c8r.imgix.net/88519cde3698506f6f10ce34/31.jpg' />
-   <Meta>
-    Description for the product image. 
-  </Meta>
+ <Image src='https://c8r.imgix.net/88519cde3698506f6f10ce34/31.jpg?w=1920&fit=clip' />
+ <Meta>
+   Description for the product image. 
+ </Meta>
  </Box>
  </Flex>
   <Text wide mb={5}>
@@ -110,36 +110,30 @@ links={props.links}
   <SectionTitle mt={6} mb={3} children='Other Projects' />
   
   <Flex nowrap mx={-2} mb={4}>
-{(props.cards || []).map(card => (
+{(props.cards || []).map(item => (
   <Box px={2} mb={3} w={[1]}>
-    <Tile src={card.src}
-          href={card.link}
-   
-   />
+    <Tile src={item.src} href={item.link} />
   </Box>
 ))}
 
 </Flex>
 </Container>
-<footer style={{borderTop: '1px solid #bbb' }}>
+<HorizontalRule />
+<footer>
 <Container pt={5} pb={4}>
-<Text mx='auto' fontSize={1}>
-  I'm currently available for contracts in Q2 of 2018. If you're interested in collaborating on a project <b style={{fontWeight: 600 }}>drop me a line</b>.
-</Text>
-
-<Flex pt={4} pb={4} justify='center' ml='auto'>
-  {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
-  {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-  {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
-  {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
-  {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-  {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
-  {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
-  {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
-  {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
-  {props.youtube && <YoutubeIcon href={props.youtube} /> }
-</Flex>
-
-<Text fontSize={0} center mx='auto'>© 2017 You, Inc.</Text>
+  <Text mx='auto' fontSize={1} children={props.footerText} />
+  <Flex pt={4} pb={4} justify='center' ml='auto'>
+    {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
+    {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
+    {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
+    {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
+    {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
+    {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
+    {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
+    {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
+    {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
+    {props.youtube && <YoutubeIcon href={props.youtube} /> }
+  </Flex>
+  <Text fontSize={0} center mx='auto' children={props.copyright} />
 </Container>
 </footer>
