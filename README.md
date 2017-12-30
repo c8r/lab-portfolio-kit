@@ -6,6 +6,8 @@ A UI kit for building portfolios with [Lab](https://compositor.io/lab) and [Iso]
 
 ![UI kit for Lab](https://c8r.imgix.net/213bc9b8c0b2ad6c821feeaf/lab-portfolio-kit.png?w=1920&fit=clip)
 
+![Templates](https://c8r.imgix.net/55dbc2bb77dfc76b86ed8c63/screens.jpg)
+
 ### Includes Templates for 
 
 - Full Page Profile 

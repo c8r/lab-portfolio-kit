@@ -205,7 +205,7 @@ tiles:
     ))}
   </Box>
 </Container>
-<HorizontalRule />
+<HorizontalRule color='black25' />
 <footer>
   <Container pt={5} pb={4}>
     <Text mx='auto' fontSize={1} children={props.footerText} />
@@ -224,7 +224,7 @@ tiles:
     <Text fontSize={0} center mx='auto' children={props.copyright} />
   </Container>
 </footer>
-<HorizontalRule />
+<HorizontalRule color='black25' />
 <footer>
   <Container pt={5} pb={4} px={3}>
     <Flex align='center'>
