@@ -2,11 +2,7 @@
 avatar: 'https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
 title: The Page Title
 subtitle: The page subtitle
-about: >-
-  Design is a part of the communication arts, design is something you plan to
-  create, it communicates to the viewer or user a visual and emotional message
-  to change or guide through an emotional connection with a product or service
-  enhancing their experience of the product or brand
+about: Some description text
 twitter: mrmrs_
 github: mrmrs
 instagram: mrmrs_
@@ -25,7 +21,7 @@ links:
 footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
-copyright: © 2017 You, Inc.
+copyright: '© 2017 You, Inc.'
 panels:
   - src: 'https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg'
     title: Multi-Word Panel Title
@@ -112,7 +108,6 @@ tiles:
     subtitle: Card Subtitle
     text: This is descripiton text about the tile.
     kicker: May 2017
-copyright: '© 2017 You, Inc.'
 ---
 <Box>
   <Container px={3} py={3}>
@@ -226,7 +221,7 @@ copyright: '© 2017 You, Inc.'
       {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
       {props.youtube && <YoutubeIcon href={props.youtube} /> }
     </Flex>
-    <Text fontSize={0} center mx='auto' children={props.copyright}>
+    <Text fontSize={0} center mx='auto' children={props.copyright} />
   </Container>
 </footer>
 <HorizontalRule />
