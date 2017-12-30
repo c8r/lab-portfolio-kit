@@ -16,7 +16,7 @@ links:
 footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
-copyright: © 2017 You, Inc.
+copyright: '© 2017 You, Inc.'
 cards:
   - src: 'https://c8r.imgix.net/1ca6cfd88c7f8604f97fe52f/28.jpg'
   - src: 'https://c8r.imgix.net/356d05385e69997331253487/29.jpg'
@@ -72,17 +72,14 @@ cards:
     </Box>
   </Flex>
 </Container>
-<footer style={{borderTop: '1px solid #bbb' }}>
+<footer>
   <Container pt={5} pb={4} px={3}>
-    <Flex align='center'>
-      <Box w={1/2}>
-        <Text fontSize={1}>
-          I'm currently available for contracts in Q2 of 2018. If you're
-          interested in collaborating on a project drop me a line.
-        </Text>
-        <Text fontSize={0}>© 2017 You, Inc.</Text>
+    <Flex wrap align='center'>
+      <Box w={[1,1/2]}>
+        <Text fontSize={1} children={props.footerText} />
+        <Text fontSize={0} children={props.copyright} />
       </Box>
-      <Flex pt={4} pb={4} justify='center' ml='auto'>
+      <Flex pt={4} pb={4} ml={[0,'auto']}>
         {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
         {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
         {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }

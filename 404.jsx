@@ -18,7 +18,7 @@ links:
 footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
-copyright: © 2017 You, Inc.
+copyright: '© 2017 You, Inc.'
 image: 'https://c8r.imgix.net/25f037c4bc2e87dc9b6b7252/68a.jpg '
 kicker: 404
 title: 'Sorry, we can''t find that page'
@@ -35,7 +35,7 @@ text: >-
 </Container>
 <HorizontalRule color='#eee' />
 <PageBG half image={props.image} />
-<Container py={5}>
+<Container py={5} px={3}>
   <PageTitle children={props.title} />
   <PageSubtitle children={props.subtitle} />
   <Text children={props.text} />
@@ -46,12 +46,12 @@ text: >-
 <HorizontalRule color='#eee' />
 <footer>
   <Container pt={5} pb={4} px={3}>
-    <Flex align='center'>
-      <Box w={1/2}>
+    <Flex wrap align='center'>
+      <Box w={[1,1/2]}>
         <Text fontSize={1} children={props.footerText} />
         <Text fontSize={0} children={props.copyright} />
       </Box>
-      <Flex pt={4} pb={4} justify='center' ml='auto'>
+      <Flex pt={4} pb={4} ml={[0,'auto']}>
         {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
         {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
         {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }

@@ -227,12 +227,12 @@ tiles:
 <HorizontalRule color='black25' />
 <footer>
   <Container pt={5} pb={4} px={3}>
-    <Flex align='center'>
-      <Box w={1/2}>
+    <Flex wrap align='center'>
+      <Box w={[1,1/2]}>
         <Text fontSize={1} children={props.footerText} />
         <Text fontSize={0} children={props.copyright} />
       </Box>
-      <Flex pt={4} pb={4} justify='center' ml='auto'>
+      <Flex pt={4} pb={4} ml={[0,'auto']}>
         {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
         {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
         {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
