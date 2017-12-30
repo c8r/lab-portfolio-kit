@@ -4,6 +4,21 @@ twitter: username
 github: username
 instagram: username
 dribbble: username
+codepen: url
+# behance: username
+# vimeo: username
+# youtube: url
+# soundcloud: username
+# facebook: url
+# pinterest: url
+# snapchat: url
+# kickstarter: url
+# npm: url
+# stackoverflow: url
+# producthunt: url
+# linkedin: url
+# etsy: url
+# slack: url
 links:
   - text: Link 1
     href: '#0'
@@ -30,14 +45,14 @@ text: Started out as a single-celled organism. Currently a multi-celled organism
     links={props.links} 
   />
 </Container>
-<HorizontalRule color='#eee' />
+<HorizontalRule color='black25' />
 <PageBG half image={props.image} />
 <Container py={5} px={3}>
   <PageTitle children={props.title} />
   <PageSubtitle children={props.subtitle} />
   <Text children={props.text} />
 </Container>
-<HorizontalRule color='#eee' />
+<HorizontalRule color='black25' />
 <footer>
   <Container pt={5} pb={4} px={3}>
     <Flex wrap align='center'>
@@ -45,17 +60,24 @@ text: Started out as a single-celled organism. Currently a multi-celled organism
         <Text fontSize={1} children={props.footerText} />
         <Text fontSize={0} children={props.copyright} />
       </Box>
-      <Flex pt={4} pb={4} ml={[0,'auto']}>
-        {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
-        {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-        {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
-        {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
-        {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-        {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
-        {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
-        {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
-        {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
-        {props.youtube && <YoutubeIcon href={props.youtube} /> }
+      <Flex w={[ 1, 1/2 ]} pt={4} pb={4} pl={[ 0,4 ]} ml={[0,'auto']} mx={-2} wrap>
+        {props.facebook && <FacebookIcon mb={2} href={props.facebook} /> }
+        {props.twitter && <TwitterIcon mb={2} href={'https://twitter.com/'+props.twitter} /> }
+        {props.github && <GitHubIcon mb={2} href={'https://github.com/'+props.github} /> }
+        {props.codepen && <CodepenIcon mb={2} href={'https://codepen.io/'+props.codepen} /> }
+        {props.stackoverflow && <StackoverflowIcon mb={2} href={props.stackoverflow} /> }
+        {props.instagram && <InstagramIcon mb={2} href={'https://instagram.com/'+props.instagram} /> }
+        {props.snapchat && <SnapchatIcon mb={2} href={props.snapchat} /> }
+        {props.dribbble && <DribbbleIcon mb={2} href={'https://dribbble.com/'+props.dribbble} /> }
+        {props.behance && <BehanceIcon mb={2} href={props.behance} /> }
+        {props.pinterest && <PinterestIcon mb={2} href={'https://pinterest.com/'+props.pinterest} /> }
+        {props.producthunt && <ProducthuntIcon mb={2} href={props.producthunt} /> }
+        {props.vimeo && <VimeoIcon mb={2} href={'https://vimeo.com/'+props.vimeo} /> }
+        {props.youtube && <YoutubeIcon mb={2} href={props.youtube} /> }
+        {props.soundcloud && <SoundcloudIcon mb={2} href={props.youtube} /> }
+        {props.kickstarter && <KickstarterIcon mb={2} href={props.kickstarter} /> }
+        {props.etsy && <EtsyIcon mb={2} href={props.etsy} /> }
+        {props.slack && <SlackIcon mb={2} href={props.slack} /> }
       </Flex>
     </Flex>
   </Container>

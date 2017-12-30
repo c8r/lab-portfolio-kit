@@ -1,12 +1,24 @@
 ---
 avatar: 'https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'
-title: The Page Title
-subtitle: The page subtitle
-about: Some description text
-twitter: mrmrs_
-github: mrmrs
-instagram: mrmrs_
-dribbble: mrmrs
+twitter: username
+github: username
+instagram: username
+dribbble: username
+codepen: url
+# behance: username
+# vimeo: username
+# youtube: url
+# soundcloud: username
+# facebook: url
+# pinterest: url
+# snapchat: url
+# kickstarter: url
+# npm: url
+# stackoverflow: url
+# producthunt: url
+# linkedin: url
+# etsy: url
+# slack: url
 links:
   - text: Link 1
     href: '#0'
@@ -22,6 +34,9 @@ footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
 copyright: '© 2017 You, Inc.'
+title: The Page Title
+subtitle: The page subtitle
+text: Some description text
 panels:
   - src: 'https://c8r.imgix.net/28ebf6f36947b63447feaa00/26.jpg'
     title: Multi-Word Panel Title
@@ -116,19 +131,13 @@ tiles:
       links={props.links} 
     />
   </Container>
-  <HorizontalRule color='#eee' />
+  <HorizontalRule color='black25' />
 </Box>
 <Box pt={5} pb={5}>
- <Container px={3}>
-  <PageTitle>
-    {props.title}
-  </PageTitle>
-  <PageSubtitle >
-    {props.subtitle}
-  </PageSubtitle>
-  <Text>
-   {props.about}
-  </Text>
+  <Container px={3}>
+    <PageTitle children={props.title} />
+    <PageSubtitle children={props.subtitle} />
+    <Text children={props.text} />
   </Container>
 </Box>
 <Container pb={5} px={2}>
@@ -146,7 +155,6 @@ tiles:
     ))}
   </Flex>
 <SectionTitle children='Work' mx={2} />
-
 {props.tiles.length%2 == 1 &&
   <Flex color='white' wrap mx={0}>
   {(props.tiles || []).map((tile, index) => (
@@ -210,16 +218,23 @@ tiles:
   <Container pt={5} pb={4}>
     <Text mx='auto' fontSize={1} children={props.footerText} />
     <Flex px={2} pt={4} pb={4} justify='center'>
-      {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
-      {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-      {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
-      {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
-      {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-      {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
-      {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
-      {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
-      {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
-      {props.youtube && <YoutubeIcon href={props.youtube} /> }
+      {props.facebook && <FacebookIcon mb={2} href={props.facebook} /> }
+      {props.twitter && <TwitterIcon mb={2} href={'https://twitter.com/'+props.twitter} /> }
+      {props.github && <GitHubIcon mb={2} href={'https://github.com/'+props.github} /> }
+      {props.codepen && <CodepenIcon mb={2} href={'https://codepen.io/'+props.codepen} /> }
+      {props.stackoverflow && <StackoverflowIcon mb={2} href={props.stackoverflow} /> }
+      {props.instagram && <InstagramIcon mb={2} href={'https://instagram.com/'+props.instagram} /> }
+      {props.snapchat && <SnapchatIcon mb={2} href={props.snapchat} /> }
+      {props.dribbble && <DribbbleIcon mb={2} href={'https://dribbble.com/'+props.dribbble} /> }
+      {props.behance && <BehanceIcon mb={2} href={props.behance} /> }
+      {props.pinterest && <PinterestIcon mb={2} href={'https://pinterest.com/'+props.pinterest} /> }
+      {props.producthunt && <ProducthuntIcon mb={2} href={props.producthunt} /> }
+      {props.vimeo && <VimeoIcon mb={2} href={'https://vimeo.com/'+props.vimeo} /> }
+      {props.youtube && <YoutubeIcon mb={2} href={props.youtube} /> }
+      {props.soundcloud && <SoundcloudIcon mb={2} href={props.youtube} /> }
+      {props.kickstarter && <KickstarterIcon mb={2} href={props.kickstarter} /> }
+      {props.etsy && <EtsyIcon mb={2} href={props.etsy} /> }
+      {props.slack && <SlackIcon mb={2} href={props.slack} /> }
     </Flex>
     <Text fontSize={0} center mx='auto' children={props.copyright} />
   </Container>
@@ -232,17 +247,24 @@ tiles:
         <Text fontSize={1} children={props.footerText} />
         <Text fontSize={0} children={props.copyright} />
       </Box>
-      <Flex pt={4} pb={4} ml={[0,'auto']}>
-        {props.twitter && <TwitterIcon href={'https://twitter.com/'+props.twitter} /> }
-        {props.github && <GitHubIcon href={'https://github.com/'+props.github} /> }
-        {props.facebook && <FacebookIcon href={'https://facebook.com/'+props.facebook} /> }
-        {props.instagram && <InstagramIcon href={'https://instagram.com/'+props.instagram} /> }
-        {props.dribbble && <DribbbleIcon href={'https://dribbble.com/'+props.dribbble} /> }
-        {props.pinterest && <PinterestIcon href={'https://pinterest.com/'+props.pinterest} /> }
-        {props.soundcloud && <SoundcloudIcon href={'https://soundcloud.com/'+props.soundcloud}  /> }
-        {props.vimeo && <VimeoIcon href={'https://vimeo.com/'+props.vimeo} /> }
-        {props.codepen && <CodepenIcon href={'https://codepen.io/'+props.codepen} /> }
-        {props.youtube && <YoutubeIcon href={props.youtube} /> }
+      <Flex w={[ 1, 1/2 ]} pt={4} pb={4} pl={[ 0,4 ]} ml={[0,'auto']} mx={-2} wrap>
+        {props.facebook && <FacebookIcon mb={2} href={props.facebook} /> }
+        {props.twitter && <TwitterIcon mb={2} href={'https://twitter.com/'+props.twitter} /> }
+        {props.github && <GitHubIcon mb={2} href={'https://github.com/'+props.github} /> }
+        {props.codepen && <CodepenIcon mb={2} href={'https://codepen.io/'+props.codepen} /> }
+        {props.stackoverflow && <StackoverflowIcon mb={2} href={props.stackoverflow} /> }
+        {props.instagram && <InstagramIcon mb={2} href={'https://instagram.com/'+props.instagram} /> }
+        {props.snapchat && <SnapchatIcon mb={2} href={props.snapchat} /> }
+        {props.dribbble && <DribbbleIcon mb={2} href={'https://dribbble.com/'+props.dribbble} /> }
+        {props.behance && <BehanceIcon mb={2} href={props.behance} /> }
+        {props.pinterest && <PinterestIcon mb={2} href={'https://pinterest.com/'+props.pinterest} /> }
+        {props.producthunt && <ProducthuntIcon mb={2} href={props.producthunt} /> }
+        {props.vimeo && <VimeoIcon mb={2} href={'https://vimeo.com/'+props.vimeo} /> }
+        {props.youtube && <YoutubeIcon mb={2} href={props.youtube} /> }
+        {props.soundcloud && <SoundcloudIcon mb={2} href={props.youtube} /> }
+        {props.kickstarter && <KickstarterIcon mb={2} href={props.kickstarter} /> }
+        {props.etsy && <EtsyIcon mb={2} href={props.etsy} /> }
+        {props.slack && <SlackIcon mb={2} href={props.slack} /> }
       </Flex>
     </Flex>
   </Container>
