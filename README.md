@@ -9,13 +9,13 @@ A UI kit for building portfolios with [Lab](https://compositor.io/lab) and [Iso]
 
 ### Includes Templates for 
 
-- Full Page Profile 
-- 404 page
-- About page
-- Project / Case Study
-- Home page
-- Photo page
-- Image Gallery
+- [Full Page Profile](https://hywwjnyalymhgwykzjhp.c8r.pub)
+- [404 page](https://tkxehokzqaydfajdabmx.c8r.pub)
+- [About page](https://vfxrzuqoiwylqxyinbsv.c8r.pub)
+- [Project / Case Study](https://labaketqlwbxgmnxmlhl.c8r.pub)
+- [Home page](https://kiagqwwioqumawzmaavg.c8r.pub)
+- [Photo page](https://iujerisjrtzimnyeekot.c8r.pub)
+- [Image Gallery](https://hipvmtmyyinebsujeuvn.c8r.pub)
 
 ## Installation
 
