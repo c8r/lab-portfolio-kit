@@ -75,18 +75,26 @@ cards:
     title: Card Title the Fourth
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg?w=1244&fit=clip'
+  - src: 'https://c8r.imgix.net/13c1a3e46dcfefee518e1c15/68a.jpg?w=1244&fit=clip'
     title: Card Title Five!
     subtitle: >-
       Card Subtitle that wraps on to multiple lines so we can see what will
       happen with stacking
     text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=1244&fit=clip'
+  - src: 'https://c8r.imgix.net/59b19cfb647d327d75bc316c/63.jpg?w=1244&fit=clip'
     title: Sixth Card Title in Series
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
   - src: 'https://c8r.imgix.net/203c5c7dc93008e6d4d5245c/44.jpg?w=1244&fit=clip'
     title: Number 7
+    subtitle: Card Subtitle
+    text: 'This is descripiton text about the card, it can be several lines long.'
+  - src: 'https://c8r.imgix.net/fd2e2629776181b45a0f8e3e/68.jpg?w=1244&fit=clip'
+    title: Number Eight Now
+    subtitle: Card Subtitle
+    text: 'This is descripiton text about the card, it can be several lines long.'
+  - src: 'https://c8r.imgix.net/2a291408bd5bf67d2dc47d0c/71.jpg?w=1244&fit=clip'
+    title: Ninth Card Title
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
 tiles:
@@ -135,7 +143,8 @@ tiles:
 </Box>
 <Container pb={5} px={2}>
   <SectionTitle children={'Projects' + props.cards.length} mx={2} />
-   {props.cards.length  == 1 && 
+  {/* For a single item gallery. Sets card to full width.  */}
+  {props.cards.length == 1 && 
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
         <Box px={2} mb={4} w={1}>
@@ -144,11 +153,13 @@ tiles:
              title={card.title}
              subtitle={card.subtitle}
              text={card.text}
-            />
+          />
         </Box>
-     ))}
+      ))}
     </Flex>
   }
+  
+  {/* For lists that contain a multiple of 3 items, set column width to 1/3 */}
   {props.cards.length % 3 == 0 && 
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
@@ -163,21 +174,24 @@ tiles:
      ))}
     </Flex>
   }
-  {props.cards.length % 3 != 0 && props.cards.length % 10 != 0 && props.cards.length % 2 == 0 && 
+
+  {/* For lists that contain an even number of items and isn't divisible by 3 */}
+  {props.cards.length % 2 == 0 && props.cards.length % 3 != 0 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
         <Box px={2} mb={4} w={[1,1/2]}>
           <Card 
-             src={card.src}
+             src={card.src} 
              title={card.title}
              subtitle={card.subtitle}
              text={card.text}
             />
         </Box>
-     ))}
+      ))}
     </Flex>
   }
-  {props.cards.length % 2 != 0 && props.cards.length % 5 == 0 && props.cards.length % 10 != 0 &&
+
+  {props.cards.length == 5 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
         <Box px={2} mb={4} w={index < props.cards.length -2 ? [ 1, 1/3 ] : [ 1, 1/2 ]}>
@@ -191,7 +205,8 @@ tiles:
      ))}
     </Flex>
   }
-  {props.cards.length % 10 == 0 &&
+
+  {props.cards.length == 10 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
         <Box px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4]}>
@@ -205,7 +220,10 @@ tiles:
      ))}
     </Flex>
   }
-  {props.cards.length % 2 != 0 && props.cards.length % 5 != 0 && props.cards.length % 7 == 0 && 
+  {/* 
+     For lists with 7 items
+  */}
+  {props.cards.length == 7 && 
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
         <Box px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4 ]}>
@@ -219,10 +237,14 @@ tiles:
      ))}
     </Flex>
   }
-  {props.cards.length > 10 && props.cards.length % 2 != 0 && props.cards.length %3 !=0 && props.cards.length % 5 != 0 && 
+  {/* 
+    For lists that have a prime number of items after 7.
+    Set first item to full width, and the rest to half width.
+  */}
+  {props.cards.length % 2 != 0 && props.cards.length %3 !=0 && props.cards.length % 5 && props.cards.length % 7 != 0 && 
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={[1,1/3,1/4 ]}>
+        <Box px={2} mb={4} w={index == 0 ? [ 1 ] : [ 1, 1/2 ]}>
           <Card 
              src={card.src}
              title={card.title}
@@ -316,35 +338,5 @@ tiles:
       {props.slack && <SlackIcon mb={2} href={props.slack} /> }
     </Flex>
     <Text fontSize={0} center mx='auto' children={props.copyright} />
-  </Container>
-</footer>
-<HorizontalRule color='black25' />
-<footer>
-  <Container pt={5} pb={4} px={3}>
-    <Flex wrap align='center'>
-      <Box w={[1,1/2]}>
-        <Text fontSize={1} children={props.footerText} />
-        <Text fontSize={0} children={props.copyright} />
-      </Box>
-      <Flex w={[ 1, 1/2 ]} pt={4} pb={4} pl={[ 0,4 ]} ml={[0,'auto']} mx={-2} wrap>
-        {props.facebook && <FacebookIcon mb={2} href={props.facebook} /> }
-        {props.twitter && <TwitterIcon mb={2} href={'https://twitter.com/'+props.twitter} /> }
-        {props.github && <GitHubIcon mb={2} href={'https://github.com/'+props.github} /> }
-        {props.codepen && <CodepenIcon mb={2} href={'https://codepen.io/'+props.codepen} /> }
-        {props.stackoverflow && <StackoverflowIcon mb={2} href={props.stackoverflow} /> }
-        {props.instagram && <InstagramIcon mb={2} href={'https://instagram.com/'+props.instagram} /> }
-        {props.snapchat && <SnapchatIcon mb={2} href={props.snapchat} /> }
-        {props.dribbble && <DribbbleIcon mb={2} href={'https://dribbble.com/'+props.dribbble} /> }
-        {props.behance && <BehanceIcon mb={2} href={props.behance} /> }
-        {props.pinterest && <PinterestIcon mb={2} href={'https://pinterest.com/'+props.pinterest} /> }
-        {props.producthunt && <ProducthuntIcon mb={2} href={props.producthunt} /> }
-        {props.vimeo && <VimeoIcon mb={2} href={'https://vimeo.com/'+props.vimeo} /> }
-        {props.youtube && <YoutubeIcon mb={2} href={props.youtube} /> }
-        {props.soundcloud && <SoundcloudIcon mb={2} href={props.youtube} /> }
-        {props.kickstarter && <KickstarterIcon mb={2} href={props.kickstarter} /> }
-        {props.etsy && <EtsyIcon mb={2} href={props.etsy} /> }
-        {props.slack && <SlackIcon mb={2} href={props.slack} /> }
-      </Flex>
-    </Flex>
   </Container>
 </footer>
