@@ -715,7 +715,8 @@
       },
       "style": {
         "textAlign": "${props.center? 'center': 'inherit'}",
-        "maxWidth": "${props.wide? '30em': '28em'}"
+        "maxWidth": "${props.wide? '30em': '28em'}",
+        "lineHeight": "1.5"
       },
       "examples": [
         "<Text>For NASA, space is still a high priority.</Text>"
@@ -827,9 +828,10 @@
         "NavLink",
         "Avatar",
         "Flexbox",
-        "Div"
+        "Div",
+        "BlockLink"
       ],
-      "jsx": "<header>\n<Flexbox>\n  <Avatar src={props.src} />\n  <Div ml='auto'>\n  {(props.links || []).map(link => (\n    <NavLink href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
+      "jsx": "<header>\n<Flexbox>\n  <BlockLink href=\"/\">\n    <Avatar src={props.src} />\n  </BlockLink>\n  <Div ml='auto'>\n  {(props.links || []).map(link => (\n    <NavLink href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
       "examples": [
         "<SiteHeader \nsrc='https://pbs.twimg.com/profile_images/874897135464046594/-umEBV_C_400x400.jpg'\nlinks={[\n  {\n    href: '#0', \n    text: 'Writing' \n  },\n  {\n    href: '#0', \n    text: 'Work' \n  },\n  {\n    href: '#0', \n    text: 'projects' \n  },\n  {\n    href: '#0', \n    text: 'Case Studies' \n  },\n   {\n    href: '#0', \n    text: 'hi@email.com' \n  },\n    ]} />"
       ],
@@ -1014,7 +1016,9 @@
         "color": "gray",
         "fontSize": 1
       },
-      "style": {},
+      "style": {
+        "lineHeight": "1.25"
+      },
       "examples": [
         "<Meta>Meta text. For legal text. Secondary descriptions.</Meta>"
       ],
