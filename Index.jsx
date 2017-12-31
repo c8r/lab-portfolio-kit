@@ -59,30 +59,34 @@ panels:
     linkText: Click Here
     href: null
 cards:
+  - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg?w=1244&fit=clip'
+    title: Card Title 1
+    subtitle: Card Subtitle
+    text: 'This is descripiton text about the card, it can be several lines long.'
   - src: 'https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=1244&fit=clip'
     title: Card Title 2
     subtitle: Card Subtitle
     text: Short card description.
   - src: 'https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg?w=1244&fit=clip'
-    title: This is a card title
+    title: This is Card Title Part 3
     subtitle: Card Subtitle
     text: You can edit all of this without touching markup
   - src: 'https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg?w=1244&fit=clip'
-    title: Card title 3
-    subtitle: Card Subtitle
-    text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=1244&fit=clip'
-    title: Card title 3
+    title: Card Title the Fourth
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
   - src: 'https://c8r.imgix.net/76e6c3da5a710f7576515cfd/3.jpg?w=1244&fit=clip'
-    title: Card Title 2
+    title: Card Title Five!
     subtitle: >-
       Card Subtitle that wraps on to multiple lines so we can see what will
       happen with stacking
     text: 'This is descripiton text about the card, it can be several lines long.'
-  - src: 'https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg?w=1244&fit=clip'
-    title: Card Title 1
+  - src: 'https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=1244&fit=clip'
+    title: Sixth Card Title in Series
+    subtitle: Card Subtitle
+    text: 'This is descripiton text about the card, it can be several lines long.'
+  - src: 'https://c8r.imgix.net/203c5c7dc93008e6d4d5245c/44.jpg?w=1244&fit=clip'
+    title: Number 7
     subtitle: Card Subtitle
     text: 'This is descripiton text about the card, it can be several lines long.'
 tiles:
@@ -130,24 +134,110 @@ tiles:
   </Container>
 </Box>
 <Container pb={5} px={2}>
-  <SectionTitle children='Projects' mx={2} />
-  <Flex wrap mx={0}>
-    {(props.cards || []).map((card, index) => (
-      <Box px={2} mb={4} w={[1,1/3]}>
-        <Card 
-         src={card.src}
-         title={card.title}
-         subtitle={card.subtitle}
-         text={card.text}
-       />
-      </Box>
-    ))}
-  </Flex>
+  <SectionTitle children={'Projects' + props.cards.length} mx={2} />
+   {props.cards.length  == 1 && 
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={1}>
+          <Card 
+             src={card.src} 
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
+  {props.cards.length % 3 == 0 && 
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={[1,1/3]}>
+          <Card 
+             src={card.src} 
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
+  {props.cards.length % 3 != 0 && props.cards.length % 10 != 0 && props.cards.length % 2 == 0 && 
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={[1,1/2]}>
+          <Card 
+             src={card.src}
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
+  {props.cards.length % 2 != 0 && props.cards.length % 5 == 0 && props.cards.length % 10 != 0 &&
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={index < props.cards.length -2 ? [ 1, 1/3 ] : [ 1, 1/2 ]}>
+          <Card 
+             src={card.src}
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
+  {props.cards.length % 10 == 0 &&
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4]}>
+          <Card 
+             src={card.src}
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
+  {props.cards.length % 2 != 0 && props.cards.length % 5 != 0 && props.cards.length % 7 == 0 && 
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4 ]}>
+          <Card 
+             src={card.src}
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
+  {props.cards.length > 10 && props.cards.length % 2 != 0 && props.cards.length %3 !=0 && props.cards.length % 5 != 0 && 
+    <Flex wrap mx={0}>
+      {(props.cards || []).map((card, index) => (
+        <Box px={2} mb={4} w={[1,1/3,1/4 ]}>
+          <Card 
+             src={card.src}
+             title={card.title}
+             subtitle={card.subtitle}
+             text={card.text}
+            />
+        </Box>
+     ))}
+    </Flex>
+  }
 <SectionTitle children='Work' mx={2} />
 {props.tiles.length%2 == 1 &&
   <Flex color='white' wrap mx={0}>
   {(props.tiles || []).map((tile, index) => (
-    <Box px={2} mb={4}e w={index === props.tiles.length -1 ? 1 : [1, 1/2]}>
+    <Box px={2} mb={4} w={index === props.tiles.length -1 ? 1 : [1, 1/2]}>
       <Tile 
        color={tile.color}
        src={tile.src}
