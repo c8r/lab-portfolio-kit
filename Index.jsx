@@ -142,7 +142,7 @@ tiles:
   </Container>
 </Box>
 <Container pb={5} px={2}>
-  <SectionTitle children={'Projects' + props.cards.length} mx={2} />
+  <SectionTitle children='Projects' mx={2} />
   {/* For a single item gallery. Sets card to full width.  */}
   {props.cards.length == 1 && 
     <Flex wrap mx={0}>
