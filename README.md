@@ -17,6 +17,9 @@ A UI kit for building portfolios with [Lab](https://compositor.io/lab) and [Iso]
 - [Photo page](https://iujerisjrtzimnyeekot.c8r.pub)
 - [Image Gallery](https://hipvmtmyyinebsujeuvn.c8r.pub)
 
+Style Guide and Component Library
+[https://qpimodfhueiclzqysehs.c8r.pub](https://qpimodfhueiclzqysehs.c8r.pub)
+
 ## Installation
 
 First clone the repo into a new project
@@ -67,14 +70,25 @@ text:
 #### Footer
 The footer has a block of text, a copyright blurb, and a list of social links
 ```
-footerText: 
-copyright: 
-dribbble: 
-youtube: 
-vimeo: 
-github: 
-twitter: 
-facebook: 
+footerText: string
+copyright: string
+facebook: url
+twitter: username
+producthunt: url
+pinterest: url
+snapchat:url
+instagram: username
+dribbble: username
+behance: username
+soundcloud: username
+youtube: url
+vimeo: username
+github: username
+npm: username
+codepen: url
+stackoverflow: url
+etsy: url
+kickstarter: url
 ```
 
 Panels, Cards, and Tiles are made up: Title, Subtitle, Kicker, Text, and an Href. Panels also display a link text. Examples of their usage can be found in Index.jsx.
