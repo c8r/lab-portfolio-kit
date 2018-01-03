@@ -140,6 +140,7 @@ links={props.links}
         {props.kickstarter && <KickstarterIcon mb={2} href={props.kickstarter} /> }
         {props.etsy && <EtsyIcon mb={2} href={props.etsy} /> }
         {props.slack && <SlackIcon mb={2} href={props.slack} /> }
+        {props.linkedin && <LinkedinIcon mb={2} href={props.linkedin} /> }
       </Flex>
     </Flex>
   </Container>
