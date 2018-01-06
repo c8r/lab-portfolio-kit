@@ -964,7 +964,7 @@
         "Div",
         "BlockLink"
       ],
-      "jsx": "<header>\n<Flexbox>\n  <BlockLink href=\"/\">\n    <Avatar src={props.src} />\n  </BlockLink>\n  <Div ml='auto'>\n  {(props.links || []).map(link => (\n    <NavLink href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
+      "jsx": "<header>\n<Flexbox>\n  <BlockLink href=\"/\">\n    <Avatar src={props.src} />\n  </BlockLink>\n  <Div ml='auto'>\n  {(props.links || []).map((link, i) => (\n    <NavLink key={i} href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
       "examples": [
         "<SiteHeader \nsrc='https://c8r.imgix.net/87760e0718677237f07e486c/timothy.jpg'\nlinks={[\n  {\n    href: '#0', \n    text: 'Writing' \n  },\n  {\n    href: '#0', \n    text: 'Work' \n  },\n  {\n    href: '#0', \n    text: 'projects' \n  },\n  {\n    href: '#0', \n    text: 'Case Studies' \n  },\n   {\n    href: '#0', \n    text: 'hi@email.com' \n  },\n    ]} />"
       ],
@@ -1215,7 +1215,7 @@
         "ListItem",
         "ListItemLink"
       ],
-      "jsx": "<List>\n  {(props.links || []).map(link => (\n    <ListItem w={[ 1, 1/3, 1/4 ]}><ListItemLink href={link.href} >{link.text}</ListItemLink></ListItem>\n  ))}\n</List>",
+      "jsx": "<List>\n  {(props.links || []).map((link, i) => (\n    <ListItem key={i} w={[ 1, 1/3, 1/4 ]}><ListItemLink href={link.href} >{link.text}</ListItemLink></ListItem>\n  ))}\n</List>",
       "examples": [
         "<LinkList />"
       ],

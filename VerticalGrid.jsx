@@ -36,9 +36,9 @@ cards:
   - src: 'https://c8r.imgix.net/e5b389e680cafc83d5f4f383/42.jpg?w=720&fit=clip'
 ---
 <Container px={3} py={3}>
-  <SiteHeader 
+  <SiteHeader
     src={props.avatar}
-    links={props.links} 
+    links={props.links}
   />
 </Container>
 <HorizontalRule color='black25' />
@@ -46,16 +46,16 @@ cards:
   <Flex px={2} mt={3}>
     <Box w={1/3} px={2}>
       {(props.cards || []).map((card, index) => (
-        <Box>
-          {index % 3 == 2 && 
-            <Card src={card.src} /> 
+        <Box key={index}>
+          {index % 3 == 2 &&
+            <Card src={card.src} />
           }
         </Box>
       ))}
     </Box>
     <Box w={1/3} px={2}>
       {(props.cards || []).map((card, index) => (
-        <Box>
+        <Box key={index}>
           {index % 3 == 1 &&
             <Card src={card.src} />
           }
@@ -64,7 +64,7 @@ cards:
     </Box>
     <Box w={1/3} px={2}>
       {(props.cards || []).map((card, index) => (
-        <Box>
+        <Box key={index}>
           {index % 3 == 0 &&
             <Card src={card.src} />
           }

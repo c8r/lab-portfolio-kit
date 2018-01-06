@@ -43,9 +43,9 @@ text: >-
   help.
 ---
 <Container px={3} py={3}>
-  <SiteHeader 
+  <SiteHeader
     src={props.avatar}
-    links={props.links} 
+    links={props.links}
   />
 </Container>
 <HorizontalRule color='black25' />
@@ -55,7 +55,7 @@ text: >-
   <PageSubtitle children={props.subtitle} />
   <Text children={props.text} />
   {(props.links || []).map((item, index) => (
-    <NavLink ml={0} mr={4} children={item.text} />
+    <NavLink key={index} ml={0} mr={4} children={item.text} />
   ))}
 </Container>
 <HorizontalRule color='black25' />
