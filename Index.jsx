@@ -16,6 +16,32 @@ links:
     href: '#0'
   - text: Link 5
     href: '#0'
+writing: 
+  links: 
+    - href: http://mrmrs.github.io/writing/2016/03/24/scalable-css/
+      text: CSS and Scalability
+      title: Scalable Css
+    - href: http://mrmrs.github.io/writing/2016/03/23/the-veil-of-ignorance/
+      text: The Veil of Ignorance
+      title: The Veil of Ignorance
+    - href: http://mrmrs.github.io/writing/2016/04/26/dogma/
+      text: Growing up with Dogma
+      title: Dogma
+    - href: http://mrmrs.github.io/writing/2016/04/26/dogma/
+      text: Design Systems
+      title: Design Systems
+    - href: http://mrmrs.github.io/writing/2016/04/26/dogma/
+      text: Too Many Tools and Frameworks
+      title: Design Systems
+    - href: http://mrmrs.github.io/writing/2016/04/26/dogma/
+      text: Webfonts
+      title: Design Systems
+    - href: http://mrmrs.github.io/writing/2016/04/26/dogma/
+      text: What are Classes for?
+      title: Design Systems
+    - href: http://mrmrs.github.io/writing/2016/04/26/dogma/
+      text: Vim as a Design Tool
+      title: Design Systems
 footerText: >-
   I'm currently available for contracts in Q2 of 2018.  If you're interested in
   collaborating on a project drop me a line.
@@ -312,6 +338,17 @@ tiles:
         }
       </Box>
     ))}
+  </Box>
+  <Box px={2} mb={5}>
+    <SectionTitle children='Writing' mb={4} />
+    <List display='block'>
+      {(props.writing.links || []).map((item, index) => (
+        <ListItem key={index}>
+          <ListItemLink href={item.href} children={item.text} title={item.title} />
+        </ListItem>
+      ))}
+    </List>
+    <LinkList pt={6} links={props.writing.links} />
   </Box>
 </Container>
 <HorizontalRule color='black25' />
