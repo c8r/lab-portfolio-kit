@@ -407,7 +407,7 @@
         "mx": 2
       },
       "style": {
-        "display": "block"
+        "display": "${props.display? props.display: 'block'}"
       },
       "examples": [
         "<Svg>\n<path d=\"M15.386.524c-4.764 0-8.64 3.876-8.64 8.64 0 4.75 3.876 8.613 8.64 8.613 4.75 0 8.614-3.864 8.614-8.613C24 4.4 20.136.524 15.386.524M.003 23.537h4.22V.524H.003\"></path>\n\n</Svg>"
@@ -1220,6 +1220,43 @@
         "<LinkList />"
       ],
       "system": []
+    },
+    {
+      "name": "Papercraft",
+      "imports": [
+        "Svg"
+      ],
+      "jsx": "<Svg color='rgba(0,0,0,.2)' width='64' height='64' display='inline-block' viewBox='0 0 32 32' {...props}>\n  {props.children == 'a' &&\n  <g>\n    <path d=\" M16 0 L32 32 L0 32 Z\"></path>\n    <path fill='#eee' d=\" M16 0 L20 24 L0 32 Z\"></path>\n  </g>\n  }\n  {props.children == 'b' &&\n  <g>\n    <path fill='' d=\"M0 0 L16 0 L32 18 L26 32 L0 32 Z\"></path>\n    <path fill='#eee' d=\"M0 0 L26 0 L32 6 L0 32 Z\"></path>\n  </g> \n  }\n  {props.children == 'c' &&\n  <g>\n    <path d=\"M0 0 L28 0 L0 32 Z\"></path>\n    <path fill='#eee' d=\"M0 0 L30 0 L32 8 Z M0 8 L32 32 L0 32 Z\"></path>\n  </g>\n  }\n  {props.children == 'd' &&\n  <g>\n    <path d=\"M0 0 L16 0 L32 18 L28 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L22 26 L0 32 Z\"/>\n  </g>\n  }\n  {props.children == 'e' &&\n  <g>\n    <path d=\"M0 0 L16 0 L32 16 L24 24 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L0 32 Z\"/>\n  </g>\n  }\n  {props.children == 'f' &&\n  <g>\n    <path d=\"M0 0 L16 0 L32 16 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'g' &&\n  <g>\n    <path d=\"M0 0 L28 0 L0 32 Z M0 32 L32 16 L32 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L30 0 L32 8 Z M0 8 L32 32 L0 32 Z\"/>\n  </g>\n  }\n  {props.children == 'h' &&\n  <g>\n    <path d=\"M0 0 L6 0 L12 32 L0 32 Z M20 0 L32 0 L32 32 L22 32 Z\"/>\n    <path fill='#eee' d=\"M32 0 L32 20 L0 32 L0 12 Z\"/>\n  </g>\n  }\n  {props.children == 'i' &&\n  <path fill='#eee' d=\"M10 0 L22 0 L22 32 L10 32 Z\"/>\n  }\n  {props.children == 'j' &&\n  <g>\n    <path d=\"M20 0 L32 0 L32 32 L16 32 Z\"/>\n    <path fill='#eee' d=\"M0 24 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'k' &&\n  <g>\n    <path d=\"M0 0 L32 0 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'l' &&\n  <g>\n    <path d=\"M0 0 L14 0 L16 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 32 L4 20 L32 26 L32 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'm' &&\n  <g>\n    <path d=\"M32 0 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'n' &&\n  <g>\n    <path d=\"M20 0 L32 0 L32 32 L16 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'o' &&\n  <g>\n    <path fill='#eee' d=\"M0 0 L32 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'p' &&\n  <g>\n    <path d=\"M0 0 L16 0 L12 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L30 20 L0 28 Z\"/>\n    j\n  </g>\n  }\n  {props.children == 'q' &&\n  <g>\n    <path d=\"M0 0 L32 0 L32 40 L0 24 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L32 32 L0 32 Z\"/>\n\n\n  </g>\n  }\n  {props.children == 'r' &&\n  <g>\n    <path d=\"M0 16 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L30 20 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 's' &&\n  <g>\n    <path d=\"M0 0 L32 16 L32 32 L0 16 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L32 8 L0 16 Z M0 24 L32 16 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 't' &&\n  <g>\n    <path d=\"M0 0 L32 0 L32 10 L22 10 L22 32 L10 32 L10 10 L0 10 Z\"/>\n    <path fill='#eee' d=\"M32 0 L32 10 L10 32 L10 10 Z\"/>\n\n  </g>\n  }\n  {props.children == 'u' &&\n  <g>\n    <path d=\"M0 0 L6 0 L16 32 L2 32 Z\"/>\n    <path fill='#eee' d=\"M24 0 L32 0 L30 32 L2 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'v' &&\n  <g>\n    <path d=\"M0 0 L32 0 L16 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L20 10 L16 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'w' &&\n  <g>\n    <path d=\"M0 0 L40 0 L32 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L40 0 L8 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'x' &&\n  <g>\n    <path d=\"M0 0 L32 0 L16 16 Z M0 32 L16 16 L32 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L16 0 L32 32 L16 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'y' &&\n  <g>\n    <path d=\"M0 0 L32 0 L22 12 L22 32 L10 32 L10 16 Z\"/>\n    <path fill='#eee' d=\"M10 0 L32 0 L10 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'z' &&\n  <g>\n    <path d=\"M0 0 L32 0 L32 16 L0 8 Z M0 20 L32 24 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M32 0 L32 16 L0 32 L0 16 Z\"/>\n  </g>\n  }\n</Svg>\n",
+      "examples": [
+        "<Papercraft mb={2} children='a' />",
+        "<Papercraft mb={2} children='b' />",
+        "<Papercraft mb={2} children='c' />",
+        "<Papercraft mb={2} children='d' />",
+        "<Papercraft mb={2} children='e' />",
+        "<Papercraft mb={2} children='f' />",
+        "<Papercraft mb={2} children='g' />",
+        "<Papercraft mb={2} children='h' />",
+        "<Papercraft mb={2} children='i' />",
+        "<Papercraft mb={2} children='j' />",
+        "<Papercraft mb={2} children='k' />",
+        "<Papercraft mb={2} children='l' />",
+        "<Papercraft mb={2} children='m' />",
+        "<Papercraft mb={2} children='n' />",
+        "<Papercraft mb={2} children='o' />",
+        "<Papercraft mb={2} children='p' />",
+        "<Papercraft height='80' viewBox='0 0 32 40' mb={2} children='q' />",
+        "<Papercraft mb={2} children='r' />",
+        "<Papercraft mb={2} children='s' />",
+        "<Papercraft mb={2} children='t' />",
+        "<Papercraft mb={2} children='u' />",
+        "<Papercraft mb={2} children='v' />",
+        "<Papercraft mb={2} children='w' />",
+        "<Papercraft mb={2} children='x' />",
+        "<Papercraft mb={2} children='y' />",
+        "<Papercraft mb={2} children='z' />"
+      ],
+      "system": [],
+      "description": "Port of papercraft from http://jxnblk.com/papercraft/"
     }
   ],
   "layout": [
@@ -1249,7 +1286,7 @@
       "w": 3,
       "h": 2,
       "x": 6,
-      "y": 36,
+      "y": 39,
       "moved": false,
       "static": false
     },
@@ -1259,7 +1296,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 16,
+      "y": 19,
       "moved": false,
       "static": false
     },
@@ -1369,7 +1406,7 @@
       "w": 3,
       "h": 3,
       "x": 6,
-      "y": 38,
+      "y": 41,
       "moved": false,
       "static": false
     },
@@ -1379,7 +1416,7 @@
       "w": 3,
       "h": 4,
       "x": 9,
-      "y": 47,
+      "y": 50,
       "moved": false,
       "static": false
     },
@@ -1389,7 +1426,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 42,
+      "y": 45,
       "moved": false,
       "static": false
     },
@@ -1489,7 +1526,7 @@
       "w": 3,
       "h": 2,
       "x": 6,
-      "y": 45,
+      "y": 48,
       "moved": false,
       "static": false
     },
@@ -1509,7 +1546,7 @@
       "w": 6,
       "h": 12,
       "x": 6,
-      "y": 24,
+      "y": 27,
       "moved": false,
       "static": false
     },
@@ -1519,7 +1556,7 @@
       "w": 3,
       "h": 2,
       "x": 6,
-      "y": 14,
+      "y": 17,
       "moved": false,
       "static": false
     },
@@ -1529,7 +1566,7 @@
       "w": 3,
       "h": 2,
       "x": 6,
-      "y": 16,
+      "y": 19,
       "moved": false,
       "static": false
     },
@@ -1539,7 +1576,7 @@
       "w": 2,
       "h": 2,
       "x": 7,
-      "y": 18,
+      "y": 21,
       "moved": false,
       "static": false
     },
@@ -1559,7 +1596,7 @@
       "w": 1,
       "h": 2,
       "x": 6,
-      "y": 18,
+      "y": 21,
       "moved": false,
       "static": false
     },
@@ -1569,7 +1606,7 @@
       "w": 3,
       "h": 4,
       "x": 6,
-      "y": 41,
+      "y": 44,
       "moved": false,
       "static": false
     },
@@ -1579,7 +1616,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 40,
+      "y": 43,
       "moved": false,
       "static": false
     },
@@ -1589,7 +1626,7 @@
       "w": 3,
       "h": 3,
       "x": 9,
-      "y": 44,
+      "y": 47,
       "moved": false,
       "static": false
     },
@@ -1599,7 +1636,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 14,
+      "y": 17,
       "moved": false,
       "static": false
     },
@@ -1609,7 +1646,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 18,
+      "y": 21,
       "moved": false,
       "static": false
     },
@@ -1619,7 +1656,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 20,
+      "y": 23,
       "moved": false,
       "static": false
     },
@@ -1639,7 +1676,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 22,
+      "y": 25,
       "moved": false,
       "static": false
     },
@@ -1739,7 +1776,7 @@
       "w": 3,
       "h": 2,
       "x": 9,
-      "y": 38,
+      "y": 41,
       "moved": false,
       "static": false
     },
@@ -1749,7 +1786,7 @@
       "w": 3,
       "h": 2,
       "x": 6,
-      "y": 20,
+      "y": 23,
       "moved": false,
       "static": false
     },
@@ -1759,7 +1796,7 @@
       "w": 1,
       "h": 2,
       "x": 9,
-      "y": 36,
+      "y": 39,
       "moved": false,
       "static": false
     },
@@ -1769,7 +1806,7 @@
       "w": 1,
       "h": 2,
       "x": 10,
-      "y": 36,
+      "y": 39,
       "moved": false,
       "static": false
     },
@@ -1779,7 +1816,7 @@
       "w": 1,
       "h": 2,
       "x": 11,
-      "y": 36,
+      "y": 39,
       "moved": false,
       "static": false
     },
@@ -1880,6 +1917,16 @@
       "h": 2,
       "x": 3,
       "y": 10,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Papercraft",
+      "i": "66",
+      "w": 6,
+      "h": 3,
+      "x": 6,
+      "y": 14,
       "moved": false,
       "static": false
     }
