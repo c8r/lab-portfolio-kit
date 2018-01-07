@@ -127,9 +127,9 @@ tiles:
 ---
 <Box>
   <Container px={3} py={3}>
-    <SiteHeader 
+    <SiteHeader
       src={props.avatar}
-      links={props.links} 
+      links={props.links}
     />
   </Container>
   <HorizontalRule color='black25' />
@@ -144,12 +144,12 @@ tiles:
 <Container pb={5} px={2}>
   <SectionTitle children='Projects' mx={2} />
   {/* For a single item gallery. Sets card to full width.  */}
-  {props.cards.length == 1 && 
+  {props.cards.length == 1 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={1}>
-          <Card 
-             src={card.src} 
+        <Box key={index} px={2} mb={4} w={1}>
+          <Card
+             src={card.src}
              title={card.title}
              subtitle={card.subtitle}
              text={card.text}
@@ -158,14 +158,14 @@ tiles:
       ))}
     </Flex>
   }
-  
+
   {/* For lists that contain a multiple of 3 items, set column width to 1/3 */}
-  {props.cards.length % 3 == 0 && 
+  {props.cards.length % 3 == 0 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={[1,1/3]}>
-          <Card 
-             src={card.src} 
+        <Box key={index} px={2} mb={4} w={[1,1/3]}>
+          <Card
+             src={card.src}
              title={card.title}
              subtitle={card.subtitle}
              text={card.text}
@@ -179,9 +179,9 @@ tiles:
   {props.cards.length % 2 == 0 && props.cards.length % 3 != 0 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={[1,1/2]}>
-          <Card 
-             src={card.src} 
+        <Box key={index} px={2} mb={4} w={[1,1/2]}>
+          <Card
+             src={card.src}
              title={card.title}
              subtitle={card.subtitle}
              text={card.text}
@@ -194,8 +194,8 @@ tiles:
   {props.cards.length == 5 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={index < props.cards.length -2 ? [ 1, 1/3 ] : [ 1, 1/2 ]}>
-          <Card 
+        <Box key={index} px={2} mb={4} w={index < props.cards.length -2 ? [ 1, 1/3 ] : [ 1, 1/2 ]}>
+          <Card
              src={card.src}
              title={card.title}
              subtitle={card.subtitle}
@@ -209,8 +209,8 @@ tiles:
   {props.cards.length == 10 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4]}>
-          <Card 
+        <Box key={index} px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4]}>
+          <Card
              src={card.src}
              title={card.title}
              subtitle={card.subtitle}
@@ -220,14 +220,14 @@ tiles:
      ))}
     </Flex>
   }
-  {/* 
+  {/*
      For lists with 7 items
   */}
-  {props.cards.length == 7 && 
+  {props.cards.length == 7 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4 ]}>
-          <Card 
+        <Box key={index} px={2} mb={4} w={index < props.cards.length -4 ? [ 1, 1/3 ] : [ 1, 1/4 ]}>
+          <Card
              src={card.src}
              title={card.title}
              subtitle={card.subtitle}
@@ -237,15 +237,15 @@ tiles:
      ))}
     </Flex>
   }
-  {/* 
+  {/*
     For lists that have a prime number of items after 7.
     Set first item to full width, and the rest to half width.
   */}
-  {props.cards.length % 2 != 0 && props.cards.length %3 !=0 && props.cards.length % 5 && props.cards.length % 7 != 0 && 
+  {props.cards.length % 2 != 0 && props.cards.length %3 !=0 && props.cards.length % 5 && props.cards.length % 7 != 0 &&
     <Flex wrap mx={0}>
       {(props.cards || []).map((card, index) => (
-        <Box px={2} mb={4} w={index == 0 ? [ 1 ] : [ 1, 1/2 ]}>
-          <Card 
+        <Box key={index} px={2} mb={4} w={index == 0 ? [ 1 ] : [ 1, 1/2 ]}>
+          <Card
              src={card.src}
              title={card.title}
              subtitle={card.subtitle}
@@ -259,8 +259,8 @@ tiles:
 {props.tiles.length%2 == 1 &&
   <Flex color='white' wrap mx={0}>
   {(props.tiles || []).map((tile, index) => (
-    <Box px={2} mb={4} w={index === props.tiles.length -1 ? 1 : [1, 1/2]}>
-      <Tile 
+    <Box key={index} px={2} mb={4} w={index === props.tiles.length -1 ? 1 : [1, 1/2]}>
+      <Tile
        color={tile.color}
        src={tile.src}
        title={tile.title}
@@ -276,8 +276,8 @@ tiles:
 {props.tiles.length%2 == 0 &&
   <Flex color='white' wrap mx={0}>
     {(props.tiles || []).map((tile, index) => (
-      <Box px={2} mb={4} w={[1, 1/2]}>
-        <Tile 
+      <Box key={index} px={2} mb={4} w={[1, 1/2]}>
+        <Tile
          color={tile.color}
          src={tile.src}
          title={tile.title}
@@ -293,10 +293,10 @@ tiles:
   <Box px={2} mb={5}>
     <SectionTitle children='Case studies' mb={4} />
     {(props.panels || []).map((panel, index) => (
-      <Box mb={5}>
+      <Box key={index} mb={5}>
         {index % 2 == 0 &&
-          <Panel 
-             title={panel.title} 
+          <Panel
+             title={panel.title}
              subtitle={panel.subtitle}
              linkText={panel.linkText}
              text={panel.text}
@@ -304,7 +304,7 @@ tiles:
         }
         {index % 2 == 1 &&
           <PanelAlt
-             title={panel.title} 
+             title={panel.title}
              subtitle={panel.subtitle}
              linkText={panel.linkText}
              text={panel.text}

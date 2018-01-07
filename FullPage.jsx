@@ -29,8 +29,8 @@ text: >-
 ---
 <PageBG image='https://mrmrs.github.io/photos/u/050.jpg' p={5}>
   <Flex justify='center'>
-  {(props.links || []).map(link => (
-    <NavLink mx={3} href={link.href} >{link.text}</NavLink>
+  {(props.links || []).map((link, i) => (
+    <NavLink key={i} mx={3} href={link.href} >{link.text}</NavLink>
   ))}
   </Flex>
   <Flex align='center' justify='center' style={{height: '100%' }}>
@@ -39,10 +39,10 @@ text: >-
       <PageTitle  children={props.title} />
       <PageSubtitle  children={props.subtitle} />
       <Text  mx='auto' children={props.text} />
-    </Center > 
+    </Center >
   </Flex>
   <footer style={{ position: 'absolute', bottom: 0 , right: 0, left: 0}}>
-    <Div pb={4}>     
+    <Div pb={4}>
       <Flex pt={4} pb={2} justify='center' ml='auto'>
         {props.facebook && <FacebookIcon mb={2} href={props.facebook} /> }
         {props.twitter && <TwitterIcon mb={2} href={'https://twitter.com/'+props.twitter} /> }

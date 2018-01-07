@@ -69,9 +69,9 @@ cards:
 ---
 <Box>
 <Container px={3} py={3}>
-<SiteHeader 
+<SiteHeader
 src={props.avatar}
-links={props.links} 
+links={props.links}
 />
 </Container>
 <HorizontalRule color='black25' />
@@ -107,8 +107,8 @@ links={props.links}
   </Text>
   <SectionTitle mt={6} mb={3} children='Other Projects' />
   <Flex nowrap mx={-2} mb={4}>
-    {(props.cards || []).map(item => (
-      <Box px={2} mb={3} w={[1]}>
+    {(props.cards || []).map((item, i) => (
+      <Box key={i} px={2} mb={3} w={[1]}>
         <Tile src={item.src} href={item.link} />
       </Box>
     ))}
