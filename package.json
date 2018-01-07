@@ -1,6 +1,6 @@
 {
   "name": "@compositor/lab-portfolio-kit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A set of UI components and templates for building a portfolio.",
   "main": "dist/index.js",
   "lab": "lab.json",
